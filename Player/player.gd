@@ -4,7 +4,9 @@ var mouse_senstivity:=0.4
 @export var esc_menu: PackedScene
 @export var camera_pivot:Node3D
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@export var jump_height:=1.0
+@export var fall_multiplier:=4.4
+var gravity:float=ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_motion:=Vector2.ZERO
 var menu
 
@@ -16,11 +18,13 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	handleMouseMotion(delta)
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-
+		if velocity.y>=0:
+			velocity += get_gravity() * delta
+		else:
+			velocity += get_gravity() * delta*fall_multiplier
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = sqrt(jump_height*2*gravity)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
