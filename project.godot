@@ -22,6 +22,7 @@ GameManager="*res://GameManager/game_manager.gd"
 [display]
 
 window/size/mode=3
+window/vsync/vsync_mode=0
 
 [input]
 
@@ -78,4 +79,5 @@ menu={
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_3d=1

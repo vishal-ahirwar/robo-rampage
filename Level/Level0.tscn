@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2ntbg4d2f2i0"]
 
 [ext_resource type="Material" uid="uid://q5ugr7qf0b3a" path="res://Level/Material/BackGrounfMaterial.tres" id="1_1v7ue"]
-[ext_resource type="Texture2D" uid="uid://ktra68xo1gn0" path="res://Level/Material/syferfontein_0d_clear_puresky_4k.exr" id="1_nc5te"]
 [ext_resource type="PackedScene" uid="uid://sjr7ypbyaxa2" path="res://Player/player.tscn" id="1_po8uu"]
+[ext_resource type="Texture2D" uid="uid://cs7cffns3vik" path="res://qwantani_puresky_2k.hdr" id="1_xb58l"]
 [ext_resource type="Material" uid="uid://ck6vkamv8gj1l" path="res://Level/Material/OrangeMaterial.tres" id="2_1nus0"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4lrnu"]
-panorama = ExtResource("1_nc5te")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5batq"]
+panorama = ExtResource("1_xb58l")
 
 [sub_resource type="Sky" id="Sky_5frlh"]
-sky_material = SubResource("PanoramaSkyMaterial_4lrnu")
+sky_material = SubResource("PanoramaSkyMaterial_5batq")
 
 [sub_resource type="Environment" id="Environment_fmykq"]
 background_mode = 2
@@ -25,6 +25,7 @@ volumetric_fog_density = 0.0962
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.258819, 0.836516, -0.482963, -4.47035e-08, 0.5, 0.866026, 0.965926, 0.224144, -0.12941, 0, 13, 0)
+light_bake_mode = 1
 shadow_enabled = true
 shadow_blur = 3.679
 directional_shadow_mode = 0
