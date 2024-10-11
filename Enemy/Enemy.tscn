@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://cx6kask8i3jr7"]
+
+[ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_6dpa5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7q8s"]
+albedo_color = Color(0.247059, 0.0784314, 0.317647, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ihx8a"]
+material = SubResource("StandardMaterial3D_l7q8s")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kyx24"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqa0o"]
+albedo_color = Color(1, 0.994191, 0.993187, 1)
+
+[sub_resource type="Animation" id="Animation_xjke4"]
+resource_name = "Attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0.5, 0.2, 0.5), Vector3(0.7, 0.3, 0.6), Vector3(0.5, 0.2, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGBox3D:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0.994191, 0.993187, 1), Color(1, 0, 0, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_658m1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGBox3D:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0.2, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGBox3D:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.994191, 0.993187, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n065n"]
+_data = {
+"Attack": SubResource("Animation_xjke4"),
+"RESET": SubResource("Animation_658m1")
+}
+
+[node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("1_6dpa5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ihx8a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kyx24")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
+size = Vector3(0.5, 0.2, 0.5)
+material = SubResource("StandardMaterial3D_tqa0o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n065n")
+}

@@ -42,7 +42,10 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
 		mouse_motion=-event.relative*mouse_senstivity
-	
+		
+	if event is InputEventScreenDrag:
+		mouse_motion=-event.relative*mouse_senstivity
+		
 	if event.is_action_pressed("menu"):
 		if menu:
 			remove_child(menu)
