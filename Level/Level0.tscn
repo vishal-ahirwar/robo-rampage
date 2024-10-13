@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://q5ugr7qf0b3a" path="res://Level/Material/BackGrounfMaterial.tres" id="1_1v7ue"]
 [ext_resource type="PackedScene" uid="uid://sjr7ypbyaxa2" path="res://Player/player.tscn" id="1_po8uu"]
-[ext_resource type="Texture2D" uid="uid://cs7cffns3vik" path="res://qwantani_puresky_2k.hdr" id="1_xb58l"]
+[ext_resource type="Texture2D" uid="uid://dn6x8aw5klui3" path="res://qwantani_puresky_2k.hdr" id="1_xb58l"]
 [ext_resource type="Material" uid="uid://ck6vkamv8gj1l" path="res://Level/Material/OrangeMaterial.tres" id="2_1nus0"]
 [ext_resource type="PackedScene" uid="uid://cx6kask8i3jr7" path="res://Enemy/Enemy.tscn" id="5_wrg01"]
 [ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="6_uwdu3"]
