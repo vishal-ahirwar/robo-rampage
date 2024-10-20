@@ -1,11 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2ntbg4d2f2i0"]
+[gd_scene load_steps=16 format=3 uid="uid://b2ntbg4d2f2i0"]
 
 [ext_resource type="Material" uid="uid://q5ugr7qf0b3a" path="res://Level/Material/BackGrounfMaterial.tres" id="1_1v7ue"]
 [ext_resource type="PackedScene" uid="uid://sjr7ypbyaxa2" path="res://Player/player.tscn" id="1_po8uu"]
-[ext_resource type="Texture2D" uid="uid://dn6x8aw5klui3" path="res://qwantani_puresky_2k.hdr" id="1_xb58l"]
+[ext_resource type="Texture2D" uid="uid://cysq0dducwggt" path="res://qwantani_puresky_2k.hdr" id="1_xb58l"]
 [ext_resource type="Material" uid="uid://ck6vkamv8gj1l" path="res://Level/Material/OrangeMaterial.tres" id="2_1nus0"]
 [ext_resource type="PackedScene" uid="uid://cx6kask8i3jr7" path="res://Enemy/Enemy.tscn" id="5_wrg01"]
 [ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="6_uwdu3"]
+[ext_resource type="PackedScene" uid="uid://bgbqc3kqp7pev" path="res://Assets/AWP.fbx" id="7_6v7jt"]
+[ext_resource type="PackedScene" uid="uid://5nn0iqco6k5c" path="res://Assets/Hunting Rifle.fbx" id="8_ibtpx"]
+[ext_resource type="PackedScene" uid="uid://cda0mornbnj10" path="res://Assets/1911.fbx" id="9_14gkt"]
+[ext_resource type="PackedScene" uid="uid://djrrdq6ehvkaq" path="res://Assets/Ruger 22.fbx" id="10_axgyc"]
+[ext_resource type="PackedScene" uid="uid://dqgiklwcbaple" path="res://Assets/USP.fbx" id="11_7v5k7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5batq"]
 panorama = ExtResource("1_xb58l")
@@ -397,3 +402,18 @@ size = Vector3(100, 1, 100)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -34)
 
 [node name="FpsCounter" parent="." instance=ExtResource("6_uwdu3")]
+
+[node name="AWP" parent="." instance=ExtResource("7_6v7jt")]
+transform = Transform3D(0.446619, 0, -0.894724, 0, 1, 0, 0.894724, 0, 0.446619, 6.05548, 8.26453, -1.13286)
+
+[node name="Hunting Rifle" parent="." instance=ExtResource("8_ibtpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55575, 7.0811, -1.5153)
+
+[node name="1911" parent="." instance=ExtResource("9_14gkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.815914, 9.13176, -2.46409)
+
+[node name="Ruger 22" parent="." instance=ExtResource("10_axgyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.273, 3.56549, -6.13233)
+
+[node name="USP" parent="." instance=ExtResource("11_7v5k7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2163, 7.30689, 0.0267628)
