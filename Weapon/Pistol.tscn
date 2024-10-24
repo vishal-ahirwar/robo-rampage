@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4nqal5rscypb"]
+
+[ext_resource type="PackedScene" uid="uid://bhjh0ttktd2ou" path="res://Weapon/hitscan_weapon.tscn" id="1_veg7k"]
+[ext_resource type="PackedScene" uid="uid://c1hf6tkpma4ls" path="res://Assets/1911.fbx" id="2_aqnnc"]
+
+[node name="Pistol" node_paths=PackedStringArray("weapon_mesh") instance=ExtResource("1_veg7k")]
+weapon_mesh = NodePath("1911")
+
+[node name="1911" parent="." index="1" instance=ExtResource("2_aqnnc")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.728, -0.45, -1.007)

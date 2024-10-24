@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 @export
 var mouse_senstivity:=0.4
 @export var esc_menu: PackedScene
@@ -9,7 +10,13 @@ const SPEED = 5.0
 var gravity:float=ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_motion:=Vector2.ZERO
 var menu
-
+@export var max_health:=100
+@export var current_health:=max_health:
+	set(value):
+		current_health=value
+		if current_health<=0:
+			get_tree().quit()
+			
 func _ready() -> void:
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	

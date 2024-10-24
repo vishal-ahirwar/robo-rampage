@@ -1,5 +1,6 @@
 extends CharacterBody3D
-
+class_name Enemy
+@onready var pistol: Node3D = $Pistol
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -9,6 +10,13 @@ var provoked:=false
 @export var aggro_range:=12.0
 @export var attack_range:=6.5
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@export var max_health:=100
+var current_health:=max_health:
+	set(value):
+		current_health=value
+		if current_health<=0:
+			queue_free()
+		provoked=true
 
 func _ready() -> void:
 	player=get_tree().get_first_node_in_group("player")
@@ -53,4 +61,4 @@ func lookAtTarget(direction:Vector3)->void:
 	
 
 func attack()->void:
-	print("die")
+	pistol.shoot()

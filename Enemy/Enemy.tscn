@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cx6kask8i3jr7"]
+[gd_scene load_steps=10 format=3 uid="uid://cx6kask8i3jr7"]
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_6dpa5"]
+[ext_resource type="PackedScene" uid="uid://d4nqal5rscypb" path="res://Weapon/Pistol.tscn" id="2_yhhp1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7q8s"]
 albedo_color = Color(0.247059, 0.0784314, 0.317647, 1)
@@ -108,3 +109,7 @@ material = SubResource("StandardMaterial3D_tqa0o")
 libraries = {
 "": SubResource("AnimationLibrary_n065n")
 }
+
+[node name="Pistol" parent="." instance=ExtResource("2_yhhp1")]
+transform = Transform3D(-0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, -0.984808, 0, 0.80607, 0)
+fire_rate = 2.0

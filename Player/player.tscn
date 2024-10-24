@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://sjr7ypbyaxa2"]
+[gd_scene load_steps=7 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
 [ext_resource type="PackedScene" uid="uid://tm66g1p371to" path="res://Widget/esc_menu.tscn" id="2_882xn"]
 [ext_resource type="Script" path="res://Player/crosshair.gd" id="3_mk0k2"]
+[ext_resource type="PackedScene" uid="uid://d4nqal5rscypb" path="res://Weapon/Pistol.tscn" id="3_mnulb"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d42b5"]
 
@@ -24,6 +25,9 @@ shape = SubResource("CapsuleShape3D_lyf8u")
 
 [node name="Camera3D" type="Camera3D" parent="CamerPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Pistol" parent="CamerPivot/Camera3D" instance=ExtResource("3_mnulb")]
+fire_rate = 2.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
