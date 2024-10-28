@@ -16,10 +16,13 @@ process_mode = 1
 
 [sub_resource type="Environment" id="Environment_fmykq"]
 background_mode = 2
+background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_h05n3")
 tonemap_mode = 3
 glow_enabled = true
-fog_sky_affect = 0.33
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.1153
 volumetric_fog_density = 0.0962
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qfmy7"]
@@ -30,8 +33,8 @@ polygons = [PackedInt32Array(3, 5, 4), PackedInt32Array(4, 5, 0), PackedInt32Arr
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.2302, 0.972559, -0.0337146, 0.118301, 0.0623559, 0.991018, 0.965926, 0.224144, -0.129409, 0, 13, 0)
+light_energy = 0.1
 light_bake_mode = 1
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fmykq")

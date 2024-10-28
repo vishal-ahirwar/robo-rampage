@@ -1,0 +1,112 @@
+[gd_scene load_steps=21 format=3 uid="uid://cjir0k41w51rl"]
+
+[ext_resource type="PackedScene" uid="uid://8p6lb50ste8l" path="res://fbx/buildings/red/building_archeryrange_red.fbx" id="1_tm4bm"]
+[ext_resource type="PackedScene" uid="uid://bgwh47341lmmm" path="res://fbx/buildings/red/building_barracks_red.fbx" id="2_83rgu"]
+[ext_resource type="PackedScene" uid="uid://c70eqkyvafeu2" path="res://fbx/buildings/red/building_blacksmith_red.fbx" id="3_gipno"]
+[ext_resource type="PackedScene" uid="uid://obp40c53msld" path="res://fbx/buildings/red/building_castle_red.fbx" id="4_3vqul"]
+[ext_resource type="PackedScene" uid="uid://vtc7j7klawdh" path="res://fbx/buildings/red/building_church_red.fbx" id="5_kufq7"]
+[ext_resource type="PackedScene" uid="uid://cedmpxsd1aqu1" path="res://fbx/buildings/blue/building_windmill_blue.fbx" id="6_i7ish"]
+[ext_resource type="PackedScene" uid="uid://dl6ko1764ucpx" path="res://fbx/buildings/blue/building_market_blue.fbx" id="7_sijmh"]
+[ext_resource type="PackedScene" uid="uid://b6d5yscrfcnp7" path="res://fbx/buildings/blue/building_mine_blue.fbx" id="8_nr5av"]
+[ext_resource type="PackedScene" uid="uid://dehn2oanxdyqy" path="res://fbx/buildings/blue/building_tavern_blue.fbx" id="9_h2oo7"]
+[ext_resource type="PackedScene" uid="uid://cdflmbupj8hg7" path="res://fbx/buildings/blue/building_tower_A_blue.fbx" id="10_j3sfx"]
+[ext_resource type="PackedScene" uid="uid://bv2rejsssnijo" path="res://fbx/buildings/blue/building_archeryrange_blue.fbx" id="11_01xdj"]
+[ext_resource type="PackedScene" uid="uid://gd1ctewk5qpi" path="res://fbx/buildings/green/building_barracks_green.fbx" id="12_mqsbr"]
+[ext_resource type="PackedScene" uid="uid://b6cb6jcvxfaa1" path="res://fbx/buildings/neutral/building_bridge_A.fbx" id="13_tnk71"]
+[ext_resource type="PackedScene" uid="uid://bjohruwiao615" path="res://fbx/buildings/neutral/building_destroyed.fbx" id="14_oqrqk"]
+[ext_resource type="PackedScene" uid="uid://despi37ypfnf" path="res://fbx/buildings/neutral/wall_straight_gate.fbx" id="15_yaih4"]
+[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="17_mbq45"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_30x6w"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_612uq"]
+sky_material = SubResource("ProceduralSkyMaterial_30x6w")
+
+[sub_resource type="Environment" id="Environment_dxlbi"]
+background_mode = 1
+background_color = Color(0, 0.128626, 0.250996, 1)
+sky = SubResource("Sky_612uq")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8q0m"]
+albedo_color = Color(0, 0.152941, 0.309804, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dxlbi")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_o8q0m")
+use_collision = true
+size = Vector3(500, 1, 500)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998062, 0.0622331, 0, -0.0622331, 0.998062, 0, 1.64694, 2.69256)
+
+[node name="building_archeryrange_red" parent="." instance=ExtResource("1_tm4bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.643472, 0, -0.374608)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="building_archeryrange_red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0.666)
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 9.792
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="building_archeryrange_red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98, 0, 4.131)
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 9.792
+
+[node name="building_barracks_red" parent="." instance=ExtResource("2_83rgu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36104, 0, -0.172256)
+
+[node name="building_blacksmith_red" parent="." instance=ExtResource("3_gipno")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27342, 0, -2.27199)
+
+[node name="building_castle_red" parent="." instance=ExtResource("4_3vqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70863, 0, -3.43042)
+
+[node name="building_church_red" parent="." instance=ExtResource("5_kufq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06306, 0, -2.74242)
+
+[node name="building_windmill_blue" parent="." instance=ExtResource("6_i7ish")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32106, 0, -0.208117)
+
+[node name="building_market_blue" parent="." instance=ExtResource("7_sijmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97433, 0, -11.4214)
+
+[node name="building_mine_blue" parent="." instance=ExtResource("8_nr5av")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06387, 0, -6.50834)
+
+[node name="building_tavern_blue" parent="." instance=ExtResource("9_h2oo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23035, 0, -8.34412)
+
+[node name="building_tower_A_blue" parent="." instance=ExtResource("10_j3sfx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78769, 0, -7.04878)
+
+[node name="building_archeryrange_blue" parent="." instance=ExtResource("11_01xdj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1183, 0, -16.6983)
+
+[node name="building_barracks_green" parent="." instance=ExtResource("12_mqsbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0643, 0, -11.8363)
+
+[node name="building_bridge_A" parent="." instance=ExtResource("13_tnk71")]
+transform = Transform3D(0.85264, 0, 0.522499, 0, 1, 0, -0.522499, 0, 0.85264, -4.08097, 0, -2.72773)
+
+[node name="building_destroyed" parent="." instance=ExtResource("14_oqrqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.431145, 0, 0.339825)
+
+[node name="wall_straight_gate" parent="." instance=ExtResource("15_yaih4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0279, 0, -6.18344)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("17_mbq45")]
