@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://sjr7ypbyaxa2"]
+[gd_scene load_steps=8 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
 [ext_resource type="PackedScene" uid="uid://tm66g1p371to" path="res://Widget/esc_menu.tscn" id="2_882xn"]
 [ext_resource type="Script" path="res://Player/crosshair.gd" id="3_mk0k2"]
 [ext_resource type="PackedScene" uid="uid://d4nqal5rscypb" path="res://Weapon/Pistol.tscn" id="3_mnulb"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="5_7y88h"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d42b5"]
 
@@ -39,3 +40,13 @@ grow_vertical = 2
 [node name="Crosshair" type="Control" parent="CenterContainer"]
 layout_mode = 2
 script = ExtResource("3_mk0k2")
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("5_7y88h")]
+offset_left = 225.0
+offset_top = -424.0
+offset_right = 440.0
+offset_bottom = -203.0
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_backward"
