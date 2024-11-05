@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6p3u1b3krlw8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2ht2"]
+albedo_color = Color(1, 0.596078, 0.0705882, 1)
+emission_enabled = true
+emission = Color(1, 0.596078, 0.0705882, 1)
+emission_energy_multiplier = 3.5
+
+[sub_resource type="Curve" id="Curve_241ps"]
+_data = [Vector2(0, 1), 0.0, 1.4, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xkbx2"]
+curve = SubResource("Curve_241ps")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_frn5b"]
+direction = Vector3(0, 0, -1)
+spread = 8.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_curve = SubResource("CurveTexture_xkbx2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_snw48"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="MuzzleFlash" type="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728481, -0.262541, -1.34572)
+material_override = SubResource("StandardMaterial3D_w2ht2")
+cast_shadow = 0
+emitting = false
+amount = 15
+lifetime = 0.2
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_frn5b")
+draw_pass_1 = SubResource("BoxMesh_snw48")

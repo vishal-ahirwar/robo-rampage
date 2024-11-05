@@ -4,6 +4,7 @@ extends Node3D
 @export var recoil:=0.05
 @export var weapon_mesh:Node3D
 @export var muzzle_flash:GPUParticles3D
+@export var sparks:=preload("res://Weapon/ParticleEffects/sparks.tscn")
 @export var recoil_speed:=10.0
 @onready var weapon_start_position:Vector3=weapon_mesh.position
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
@@ -36,6 +37,14 @@ func shoot():
 	printt("fired",)
 	weapon_mesh.position.z+=recoil
 	var collider=ray_cast_3d.get_collider()
+	if ray_cast_3d.get_collider():
+		spawnSparks()
 	if collider is Enemy or collider is Player: 
 		collider.current_health-=weapon_damage
 		
+
+func spawnSparks():
+	var spark=sparks.instantiate()
+	spark.global_position=ray_cast_3d.get_collision_point()
+	add_child(spark)
+	
