@@ -15,7 +15,9 @@ var menu
 @export var max_health:=100
 @export var current_health:=max_health:
 	set(value):
-		animationplay_damage.play("damage_dealt")
+		if value<current_health:
+			animationplay_damage.stop(false)	
+			animationplay_damage.play("damage_dealt")
 		current_health=value
 		if current_health<=0:
 			get_tree().quit()
