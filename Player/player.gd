@@ -10,9 +10,12 @@ const SPEED = 5.0
 var gravity:float=ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_motion:=Vector2.ZERO
 var menu
+@onready var animationplay_damage: AnimationPlayer = $AnimationplayDamage
+
 @export var max_health:=100
 @export var current_health:=max_health:
 	set(value):
+		animationplay_damage.play("damage_dealt")
 		current_health=value
 		if current_health<=0:
 			get_tree().quit()
