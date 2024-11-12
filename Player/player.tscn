@@ -1,15 +1,42 @@
 [gd_scene load_steps=12 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
-[ext_resource type="PackedScene" uid="uid://tm66g1p371to" path="res://Widget/esc_menu.tscn" id="2_882xn"]
 [ext_resource type="Script" path="res://Player/crosshair.gd" id="3_mk0k2"]
 [ext_resource type="PackedScene" uid="uid://d4nqal5rscypb" path="res://Weapon/Pistol.tscn" id="3_mnulb"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="5_7y88h"]
+[ext_resource type="PackedScene" uid="uid://blitsm6xcqmm5" path="res://Player/GameOver.tscn" id="6_6me57"]
 [ext_resource type="Texture2D" uid="uid://cux7msiamr7y2" path="res://Assets/damage.png" id="6_hp8yq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d42b5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lyf8u"]
+
+[sub_resource type="Animation" id="Animation_dnv7c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("damage:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("damage:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_p76b7"]
 resource_name = "damage_dealt"
@@ -39,33 +66,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_dnv7c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("damage:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(-2),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("damage:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(-2),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f41o5"]
 _data = {
 "RESET": SubResource("Animation_dnv7c"),
@@ -75,7 +75,6 @@ _data = {
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_pivot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_m171r")
-esc_menu = ExtResource("2_882xn")
 camera_pivot = NodePath("CamerPivot")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -130,3 +129,6 @@ libraries = {
 "": SubResource("AnimationLibrary_f41o5")
 }
 autoplay = "RESET"
+
+[node name="GameOverMenu" parent="." instance=ExtResource("6_6me57")]
+visible = false

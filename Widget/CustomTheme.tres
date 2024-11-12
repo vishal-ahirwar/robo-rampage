@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cvjyqpf37mc22"]
+
+[ext_resource type="FontFile" uid="uid://gnddgaph6lxi" path="res://Assets/static/FunnelDisplay-Regular.ttf" id="1_s0dkv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwswo"]
+bg_color = Color(0.6, 0.690196, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+default_font = ExtResource("1_s0dkv")
+default_font_size = 64
+Button/styles/normal = SubResource("StyleBoxFlat_lwswo")

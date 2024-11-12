@@ -2,7 +2,6 @@ extends CharacterBody3D
 class_name Player
 @export
 var mouse_senstivity:=0.4
-@export var esc_menu: PackedScene
 @export var camera_pivot:Node3D
 const SPEED = 5.0
 @export var jump_height:=1.0
@@ -11,6 +10,7 @@ var gravity:float=ProjectSettings.get_setting("physics/3d/default_gravity")
 var mouse_motion:=Vector2.ZERO
 var menu
 @onready var animationplay_damage: AnimationPlayer = $AnimationplayDamage
+@onready var game_over_menu: Control = $GameOverMenu
 
 @export var max_health:=100
 @export var current_health:=max_health:
@@ -20,7 +20,7 @@ var menu
 			animationplay_damage.play("damage_dealt")
 		current_health=value
 		if current_health<=0:
-			get_tree().quit()
+			game_over_menu.gameOver()
 			
 func _ready() -> void:
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
@@ -65,8 +65,6 @@ func _input(event: InputEvent) -> void:
 			menu=null
 		else:
 			Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
-			menu=esc_menu.instantiate()
-			add_child(menu)
 		
 func handleMouseMotion(delta:float)->void:
 	rotate_y(delta*mouse_motion.x)

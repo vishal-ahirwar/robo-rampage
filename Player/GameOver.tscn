@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://blitsm6xcqmm5"]
+
+[ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="1_b2r2o"]
+[ext_resource type="Shader" path="res://Player/blur.gdshader" id="2_dh436"]
+[ext_resource type="Script" path="res://Player/game_over.gd" id="2_rygir"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kqq3j"]
+shader = ExtResource("2_dh436")
+shader_parameter/lod = 2.744
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3ibi2"]
+specular_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="GameOverMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b2r2o")
+script = ExtResource("2_rygir")
+
+[node name="BlurBackround" type="TextureRect" parent="."]
+modulate = Color(0.0338533, 0.0338533, 0.0338533, 1)
+material = SubResource("ShaderMaterial_kqq3j")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_3ibi2")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_b2r2o")
+text = "Damn! You Lost"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="BtnTryAgain" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Try Again"
+
+[node name="BtnGaveUp" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Give up"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnTryAgain" to="." method="_on_btn_try_again_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnGaveUp" to="." method="_on_btn_gave_up_pressed"]
