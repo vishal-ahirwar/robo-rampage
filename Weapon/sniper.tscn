@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://davymn0v6qhsb"]
+
+[ext_resource type="PackedScene" uid="uid://bhjh0ttktd2ou" path="res://Weapon/hitscan_weapon.tscn" id="1_yyhfw"]
+[ext_resource type="PackedScene" uid="uid://i0cw744ukcr0" path="res://Assets/AWP.fbx" id="2_dub5t"]
+[ext_resource type="PackedScene" uid="uid://b6p3u1b3krlw8" path="res://Weapon/ParticleEffects/muzzle_flash.tscn" id="3_ipoip"]
+[ext_resource type="AudioStream" uid="uid://b4pyr057ev62x" path="res://Audio/cs_go-awp-sound.mp3" id="4_7kyd8"]
+
+[node name="Sniper" node_paths=PackedStringArray("weapon_mesh", "muzzle_flash", "fire_sound") instance=ExtResource("1_yyhfw")]
+fire_rate = 0.7
+recoil = 1.0
+weapon_mesh = NodePath("AWP")
+muzzle_flash = NodePath("MuzzleFlash")
+recoil_speed = 5.0
+weapon_damage = 100
+fire_sound = NodePath("AudioStreamPlayer")
+
+[node name="AWP" parent="." index="2" instance=ExtResource("2_dub5t")]
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 0.728, -0.45, -1.007)
+
+[node name="MuzzleFlash" parent="." index="3" instance=ExtResource("3_ipoip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728481, -0.36608, -2.54464)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("4_7kyd8")

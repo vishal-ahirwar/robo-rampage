@@ -1,37 +1,38 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2ntbg4d2f2i0"]
+[gd_scene load_steps=16 format=3 uid="uid://b2ntbg4d2f2i0"]
 
 [ext_resource type="Texture2D" uid="uid://u8o8knhfe83s" path="res://Assets/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_nhri6"]
 [ext_resource type="PackedScene" uid="uid://sjr7ypbyaxa2" path="res://Player/player.tscn" id="1_po8uu"]
+[ext_resource type="Texture2D" uid="uid://dofm2565vodjf" path="res://Assets/kenney-prototype-textures-db6622fbe90621eed70a0b417ae8d97281f45e6c/addons/kenney_prototype_textures/dark/NormalMap.png" id="5_bvhno"]
 [ext_resource type="PackedScene" uid="uid://cx6kask8i3jr7" path="res://Enemy/Enemy.tscn" id="5_wrg01"]
 [ext_resource type="Texture2D" uid="uid://ul73a6jfvcp3" path="res://Assets/kenney-prototype-textures-db6622fbe90621eed70a0b417ae8d97281f45e6c/addons/kenney_prototype_textures/dark/texture_01.png" id="5_xhmm7"]
 [ext_resource type="Texture2D" uid="uid://dmxlavclt1bks" path="res://Assets/kenney-prototype-textures-db6622fbe90621eed70a0b417ae8d97281f45e6c/addons/kenney_prototype_textures/dark/texture_02.png" id="6_dicbw"]
-[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="6_uwdu3"]
-[ext_resource type="Texture2D" uid="uid://bhi8jrbwr2aiw" path="res://Assets/kenney-prototype-textures-db6622fbe90621eed70a0b417ae8d97281f45e6c/addons/kenney_prototype_textures/dark/texture_08.png" id="7_gakwe"]
 [ext_resource type="LightmapGIData" uid="uid://r4rjxtnnce74" path="res://Level/Level0.lmbake" id="8_76bmo"]
-[ext_resource type="PackedScene" uid="uid://jf7fl1ke3ytq" path="res://Blocks/BLOCK_01.tscn" id="9_uoh1u"]
 [ext_resource type="PackedScene" uid="uid://xucpinnbno77" path="res://Pickups/pistol_bullet.tscn" id="10_iijef"]
 [ext_resource type="PackedScene" uid="uid://bs2y7igx6r1t0" path="res://Pickups/op_bullets.tscn" id="11_pfrro"]
+[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="11_ybarg"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kciau"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ij33q"]
 panorama = ExtResource("1_nhri6")
 
 [sub_resource type="Sky" id="Sky_h05n3"]
-sky_material = SubResource("PanoramaSkyMaterial_kciau")
+sky_material = SubResource("PanoramaSkyMaterial_ij33q")
 
 [sub_resource type="Environment" id="Environment_fmykq"]
 background_mode = 2
+background_color = Color(1, 0.419608, 0.403922, 1)
 sky = SubResource("Sky_h05n3")
 tonemap_mode = 3
+sdfgi_bounce_feedback = 1.99
+sdfgi_cascades = 8
+sdfgi_max_distance = 3276.8
 sdfgi_y_scale = 2
 glow_enabled = true
-glow_intensity = 2.93
-fog_light_color = Color(0.909873, 0.316651, 0.325547, 1)
-volumetric_fog_density = 0.0171
-volumetric_fog_emission = Color(0.909804, 0.317647, 0.32549, 1)
+fog_light_color = Color(0, 0, 0, 1)
+volumetric_fog_albedo = Color(1, 0.556863, 0.513726, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qfmy7"]
-vertices = PackedVector3Array(-69.5, -4.5, -23, -47.5, -4.5, -23, -47.25, -4.5, -25.25, -42.75, -4.5, -69.5, -69.5, -4.5, -69.5, -43, -4.5, -25.25, -12.5, -4.5, -25.25, -12.25, -4.5, -28, -13.5, -4.5, -28.25, -17.25, -4.5, -25.25, -41.25, -4.5, -25, -13.5, -4.5, -34, -12, -4.5, -69.5, -41.25, -4.5, -23.25, -17.5, -4.5, -23.25, -11.75, -4.5, -34.25, -9, -4.5, -34.25, -8.75, -4.5, -69.5, -7.25, -4.5, -34, -7.25, -4.5, -32.25, 16.5, -4.5, -32.25, 16.5, -4.5, -34, 18.25, -4.5, -34.25, 18, -4.5, -69.5, 21, -4.5, -34.25, 21.25, -4.5, -69.5, 61.5, -4.5, -34.25, 61.75, -4.5, -32.5, 69.5, -4.5, -32.75, 69.5, -4.5, -69.5, 22.75, -4.5, -34, 22.75, -4.5, -32.25, 55.5, -4.5, -32.25, 55.75, -4.5, -34.25, -12.5, 95.5, -33.25, -12.5, 95.5, -29, -8.25, 95.5, -29, -8.25, 95.5, -33.25, 17.5, 95.5, -33.25, 17.5, 95.5, -29, 21.75, 95.5, -29, 21.75, 95.5, -33.25, 56.5, 95.5, -33.25, 56.5, 95.5, -29, 60.75, 95.5, -29, 60.75, 95.5, -33.25, -12.25, -4.5, -33, -12.25, -4.5, -29.25, -8.5, -4.5, -29.25, -8.5, -4.5, -33, 17.75, -4.5, -33, 17.75, -4.5, -29.25, 21.5, -4.5, -29.25, 21.5, -4.5, -33, 56.75, -4.5, -33, 56.75, -4.5, -29.25, 60.5, -4.5, -29.25, 60.5, -4.5, -33, 61.5, -4.5, -28, 61.5, -4.5, -13.25, 61.75, -4.5, -8.75, 69.5, -4.5, -8.5, 55.75, -4.5, -28, 55.75, -4.5, -13.25, -7.25, -4.5, -30, 16.5, -4.5, -30, 22.75, -4.5, -30, 55.5, -4.5, -30, 6.25, -4.5, -19, 12, -4.5, -13.25, 17, -4.5, -13.25, 17.25, -4.5, -28, 16.5, -4.5, -28.25, -7.25, -4.5, -28.25, -7.75, -4.5, -28, 17.75, -4.5, -13, 22.5, -4.5, -28, 55.5, -4.5, -11.25, 17.75, -4.5, -11.25, -11.25, -4.5, -25, -11.25, -4.5, -19.5, -46.5, 95.5, -24.25, -46.5, 95.5, -20, -42.25, 95.5, -20, -42.25, 95.5, -24.25, -16.5, 95.5, -24.25, -16.5, 95.5, -20, -12.25, 95.5, -20, -12.25, 95.5, -24.25, -46.25, -4.5, -24, -46.25, -4.5, -20.25, -42.5, -4.5, -20.25, -42.5, -4.5, -24, -16.25, -4.5, -24, -16.25, -4.5, -20.25, -12.5, -4.5, -20.25, -12.5, -4.5, -24, -41.25, -4.5, -21, -17.5, -4.5, -21, -69.5, -4.5, -21.25, -47.5, -4.5, -21.25, -69.5, -4.5, 7, -47.5, -4.5, 7, -47.5, -4.5, 5, -47.5, -4.5, -19.25, -45.5, -4.5, 4.75, -45.5, -4.5, -19, -13.5, -4.5, -2, -12.25, -4.5, -2.25, -12.5, -4.5, -19, -17.25, -4.5, -19, -13.5, -4.5, 3.5, -41.5, -4.5, -19, -41.75, -4.5, 4.75, -43.25, -4.5, -19, -43.25, -4.5, 4.75, 11.5, -4.5, -13, 11.5, -4.5, -7.5, -11.5, -4.5, -19, -7.75, -4.5, -2.25, 12.5, 95.5, -12.25, 12.5, 95.5, -8, 16.75, 95.5, -8, 16.75, 95.5, -12.25, 56.5, 95.5, -12.25, 56.5, 95.5, -8, 60.75, 95.5, -8, 60.75, 95.5, -12.25, 12.75, -4.5, -12, 12.75, -4.5, -8.25, 16.5, -4.5, -8.25, 16.5, -4.5, -12, 56.75, -4.5, -12, 56.75, -4.5, -8.25, 60.5, -4.5, -8.25, 60.5, -4.5, -12, 17.75, -4.5, -9, 55.5, -4.5, -9, 54.25, -4.5, -6.25, 55.5, -4.5, -7.5, 17.5, -4.5, 14.75, 17.75, -4.5, 16.75, 37.5, -4.5, 16.75, 37.75, -4.5, 14.75, 17.5, -4.5, -7, 15.75, -4.5, -7, 15.75, -4.5, 14.75, 43.25, -4.5, 14.75, 55.75, -4.5, -7, 61.5, -4.5, -7, 43.75, -4.5, 15.25, 43.75, -4.5, 16.5, 69.5, -4.5, 16.25, -7.25, -4.5, -1.75, 12, -4.5, -7, 13.5, -4.5, -7, -7.25, -4.5, 3.75, 12, -4.5, 14.75, 13.5, -4.5, 14.75, -7.75, -4.5, 4, -12.5, 95.5, -1.25, -12.5, 95.5, 3, -8.25, 95.5, 3, -8.25, 95.5, -1.25, -12.25, -4.5, -1, -12.25, -4.5, 2.75, -8.5, -4.5, 2.75, -8.5, -4.5, -1, -41.25, -4.5, 5.25, -13, -4.5, 4, -11.5, -4.5, 16.75, -11.5, -4.5, 4, -13.25, -4.5, 16.75, -41.25, -4.5, 10.75, -41.75, -4.5, 11, -13.5, -4.5, 17.25, -9.25, -4.5, 16.75, -9.25, -4.5, 4, -7.5, -4.5, 16.75, -7.25, -4.5, 18.5, 11.5, -4.5, 18.25, 11.5, -4.5, 15, -46.5, 95.5, 5.75, -46.5, 95.5, 10, -42.25, 95.5, 10, -42.25, 95.5, 5.75, -46.25, -4.5, 6, -46.25, -4.5, 9.75, -42.5, -4.5, 9.75, -42.5, -4.5, 6, -69.5, -4.5, 8.75, -47.5, -4.5, 8.75, -47.5, -4.5, 31, -45.5, -4.5, 30.75, -45.5, -4.5, 11, -47.5, -4.5, 10.75, -69.5, -4.5, 33, -47.5, -4.5, 33, -43.25, -4.5, 30.75, -43.25, -4.5, 11, -41.75, -4.5, 30.75, -13.5, -4.5, 22.75, 12.5, 95.5, 15.75, 12.5, 95.5, 20, 16.75, 95.5, 20, 16.75, 95.5, 15.75, 38.5, 95.5, 15.75, 38.5, 95.5, 20, 42.75, 95.5, 20, 42.75, 95.5, 15.75, 12.75, -4.5, 16, 12.75, -4.5, 19.75, 16.5, -4.5, 19.75, 16.5, -4.5, 16, 38.75, -4.5, 16, 38.75, -4.5, 19.75, 42.5, -4.5, 19.75, 42.5, -4.5, 16, 43.75, -4.5, 19.25, 69.5, -4.5, 19.5, 17.75, -4.5, 20.75, 17.25, -4.5, 21, 26, -4.5, 29.5, 26.25, -4.5, 29, 31.75, -4.5, 29, 37.5, -4.5, 20.5, -12.5, 95.5, 17.75, -12.5, 95.5, 22, -8.25, 95.5, 22, -8.25, 95.5, 17.75, -12.25, -4.5, 18, -12.25, -4.5, 21.75, -8.5, -4.5, 21.75, -8.5, -4.5, 18, -11.5, -4.5, 23, -11.5, -4.5, 30.75, -7.5, -4.5, 30.75, -7.25, -4.5, 22.75, -7.25, -4.5, 31.25, 12, -4.5, 21, 11.5, -4.5, 20.75, 41.75, -4.5, 21, 41.75, -4.5, 31.75, 43.5, -4.5, 31.75, 43.5, -4.5, 21, 43.75, -4.5, 33.5, 69.5, -4.5, 33.25, 32.25, -4.5, 33.25, 37.5, -4.5, 33.5, 37.75, -4.5, 31.75, 32.25, -4.5, 29.25, 37.75, -4.5, 21, -7.25, -4.5, 36.75, 26, -4.5, 35, -9.5, -4.5, 37, -9.5, -4.5, 69.5, 27.5, -4.5, 69.5, 27.75, -4.5, 35.25, -13.5, -4.5, 31, -41.25, -4.5, 31, -41.25, -4.5, 32.75, -13.5, -4.5, 32.75, 27, 95.5, 30, 27, 95.5, 34, 31, 95.5, 34, 31, 95.5, 30, 27.25, -4.5, 30.25, 27.25, -4.5, 34, 31, -4.5, 34, 31, -4.5, 30.25, -46.5, 95.5, 31.75, -46.5, 95.5, 36, -42.25, 95.5, 36, -42.25, 95.5, 31.75, -12.5, 95.5, 31.75, -12.5, 95.5, 36, -8.25, 95.5, 36, -8.25, 95.5, 31.75, -46.25, -4.5, 32, -46.25, -4.5, 35.75, -42.5, -4.5, 35.75, -42.5, -4.5, 32, -12.25, -4.5, 32, -12.25, -4.5, 35.75, -8.5, -4.5, 35.75, -8.5, -4.5, 32, -41.25, -4.5, 35, -13.5, -4.5, 35, 38.5, 95.5, 32.75, 38.5, 95.5, 37, 42.75, 95.5, 37, 42.75, 95.5, 32.75, -69.5, -4.5, 34.75, -47.5, -4.5, 34.75, 38.75, -4.5, 33, 38.75, -4.5, 36.75, 42.5, -4.5, 36.75, 42.5, -4.5, 33, 32.25, -4.5, 34.75, 31.75, -4.5, 35.25, 37.5, -4.5, 37.75, 39.75, -4.5, 69.5, 39.75, -4.5, 38, 43.75, -4.5, 36.25, 69.5, -4.5, 36.5, -47.5, -4.5, 36.75, -45.25, -4.5, 37, -69.5, -4.5, 69.5, -45.25, -4.5, 69.5, -13.25, -4.5, 37, -41.5, -4.5, 37, -43.5, -4.5, 69.5, -11.25, -4.5, 69.5, -11.25, -4.5, 37, -43.5, -4.5, 37, 43.5, -4.5, 38, 41.5, -4.5, 69.5, 69.5, -4.5, 69.5, 41.5, -4.5, 38)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 2), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(10, 5, 9), PackedInt32Array(9, 5, 11), PackedInt32Array(11, 5, 12), PackedInt32Array(12, 5, 3), PackedInt32Array(11, 8, 9), PackedInt32Array(13, 10, 14), PackedInt32Array(14, 10, 9), PackedInt32Array(12, 15, 11), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(18, 16, 21), PackedInt32Array(21, 16, 22), PackedInt32Array(22, 16, 17), PackedInt32Array(22, 17, 23), PackedInt32Array(22, 23, 24), PackedInt32Array(24, 23, 25), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 29), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(29, 26, 33), PackedInt32Array(30, 24, 33), PackedInt32Array(33, 24, 25), PackedInt32Array(33, 25, 29), PackedInt32Array(37, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(41, 40, 38), PackedInt32Array(38, 40, 39), PackedInt32Array(45, 44, 42), PackedInt32Array(42, 44, 43), PackedInt32Array(49, 48, 46), PackedInt32Array(46, 48, 47), PackedInt32Array(53, 52, 50), PackedInt32Array(50, 52, 51), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(27, 28, 58), PackedInt32Array(58, 28, 59), PackedInt32Array(59, 28, 60), PackedInt32Array(60, 28, 61), PackedInt32Array(59, 63, 58), PackedInt32Array(58, 63, 62), PackedInt32Array(19, 20, 64), PackedInt32Array(64, 20, 65), PackedInt32Array(31, 32, 66), PackedInt32Array(66, 32, 67), PackedInt32Array(69, 68, 70), PackedInt32Array(70, 68, 72), PackedInt32Array(70, 72, 71), PackedInt32Array(72, 68, 65), PackedInt32Array(65, 68, 73), PackedInt32Array(65, 73, 64), PackedInt32Array(68, 74, 73), PackedInt32Array(70, 71, 75), PackedInt32Array(75, 71, 76), PackedInt32Array(76, 66, 67), PackedInt32Array(62, 63, 77), PackedInt32Array(75, 76, 78), PackedInt32Array(78, 76, 77), PackedInt32Array(77, 76, 62), PackedInt32Array(62, 76, 67), PackedInt32Array(6, 7, 79), PackedInt32Array(79, 7, 74), PackedInt32Array(79, 74, 80), PackedInt32Array(80, 74, 68), PackedInt32Array(84, 83, 81), PackedInt32Array(81, 83, 82), PackedInt32Array(88, 87, 85), PackedInt32Array(85, 87, 86), PackedInt32Array(92, 91, 89), PackedInt32Array(89, 91, 90), PackedInt32Array(96, 95, 93), PackedInt32Array(93, 95, 94), PackedInt32Array(13, 14, 97), PackedInt32Array(97, 14, 98), PackedInt32Array(0, 1, 99), PackedInt32Array(99, 1, 100), PackedInt32Array(103, 102, 101), PackedInt32Array(99, 100, 104), PackedInt32Array(103, 101, 105), PackedInt32Array(105, 101, 106), PackedInt32Array(106, 101, 104), PackedInt32Array(104, 101, 99), PackedInt32Array(108, 107, 109), PackedInt32Array(109, 107, 110), PackedInt32Array(97, 98, 110), PackedInt32Array(107, 111, 110), PackedInt32Array(110, 111, 97), PackedInt32Array(97, 111, 112), PackedInt32Array(112, 111, 113), PackedInt32Array(115, 114, 113), PackedInt32Array(113, 114, 112), PackedInt32Array(68, 69, 116), PackedInt32Array(68, 116, 117), PackedInt32Array(108, 109, 118), PackedInt32Array(118, 80, 108), PackedInt32Array(108, 80, 119), PackedInt32Array(119, 80, 68), PackedInt32Array(119, 68, 117), PackedInt32Array(106, 114, 105), PackedInt32Array(105, 114, 115), PackedInt32Array(123, 122, 120), PackedInt32Array(120, 122, 121), PackedInt32Array(127, 126, 124), PackedInt32Array(124, 126, 125), PackedInt32Array(131, 130, 128), PackedInt32Array(128, 130, 129), PackedInt32Array(135, 134, 132), PackedInt32Array(132, 134, 133), PackedInt32Array(78, 77, 136), PackedInt32Array(136, 77, 137), PackedInt32Array(137, 139, 138), PackedInt32Array(141, 140, 142), PackedInt32Array(142, 140, 143), PackedInt32Array(144, 136, 140), PackedInt32Array(140, 136, 143), PackedInt32Array(143, 136, 138), PackedInt32Array(138, 136, 137), PackedInt32Array(140, 146, 144), PackedInt32Array(144, 146, 145), PackedInt32Array(138, 147, 143), PackedInt32Array(148, 138, 139), PackedInt32Array(148, 149, 138), PackedInt32Array(138, 149, 152), PackedInt32Array(138, 152, 150), PackedInt32Array(150, 152, 151), PackedInt32Array(60, 61, 149), PackedInt32Array(149, 61, 152), PackedInt32Array(119, 117, 153), PackedInt32Array(153, 117, 154), PackedInt32Array(154, 155, 153), PackedInt32Array(153, 155, 156), PackedInt32Array(156, 155, 157), PackedInt32Array(157, 155, 158), PackedInt32Array(156, 157, 159), PackedInt32Array(155, 145, 158), PackedInt32Array(158, 145, 146), PackedInt32Array(138, 150, 147), PackedInt32Array(163, 162, 160), PackedInt32Array(160, 162, 161), PackedInt32Array(167, 166, 164), PackedInt32Array(164, 166, 165), PackedInt32Array(113, 111, 168), PackedInt32Array(168, 111, 169), PackedInt32Array(171, 170, 169), PackedInt32Array(169, 170, 172), PackedInt32Array(173, 175, 174), PackedInt32Array(172, 175, 169), PackedInt32Array(169, 175, 173), PackedInt32Array(169, 173, 168), PackedInt32Array(171, 177, 170), PackedInt32Array(170, 177, 176), PackedInt32Array(177, 159, 176), PackedInt32Array(176, 159, 178), PackedInt32Array(181, 180, 179), PackedInt32Array(178, 159, 179), PackedInt32Array(179, 159, 181), PackedInt32Array(181, 159, 157), PackedInt32Array(185, 184, 182), PackedInt32Array(182, 184, 183), PackedInt32Array(189, 188, 186), PackedInt32Array(186, 188, 187), PackedInt32Array(101, 102, 190), PackedInt32Array(190, 102, 191), PackedInt32Array(193, 192, 194), PackedInt32Array(194, 192, 195), PackedInt32Array(195, 192, 196), PackedInt32Array(195, 196, 190), PackedInt32Array(190, 191, 195), PackedInt32Array(192, 197, 196), PackedInt32Array(194, 199, 193), PackedInt32Array(193, 199, 198), PackedInt32Array(199, 174, 198), PackedInt32Array(198, 174, 200), PackedInt32Array(200, 174, 201), PackedInt32Array(201, 174, 175), PackedInt32Array(205, 204, 202), PackedInt32Array(202, 204, 203), PackedInt32Array(209, 208, 206), PackedInt32Array(206, 208, 207), PackedInt32Array(213, 212, 210), PackedInt32Array(210, 212, 211), PackedInt32Array(217, 216, 214), PackedInt32Array(214, 216, 215), PackedInt32Array(151, 152, 218), PackedInt32Array(218, 152, 219), PackedInt32Array(223, 222, 220), PackedInt32Array(220, 222, 221), PackedInt32Array(225, 224, 142), PackedInt32Array(142, 224, 223), PackedInt32Array(142, 223, 220), PackedInt32Array(142, 220, 141), PackedInt32Array(229, 228, 226), PackedInt32Array(226, 228, 227), PackedInt32Array(233, 232, 230), PackedInt32Array(230, 232, 231), PackedInt32Array(235, 234, 236), PackedInt32Array(236, 234, 237), PackedInt32Array(236, 237, 238), PackedInt32Array(238, 237, 240), PackedInt32Array(238, 240, 239), PackedInt32Array(180, 240, 179), PackedInt32Array(179, 240, 237), PackedInt32Array(244, 243, 241), PackedInt32Array(241, 243, 242), PackedInt32Array(244, 218, 243), PackedInt32Array(243, 218, 245), PackedInt32Array(245, 218, 219), PackedInt32Array(245, 219, 246), PackedInt32Array(248, 247, 249), PackedInt32Array(249, 247, 250), PackedInt32Array(224, 225, 251), PackedInt32Array(250, 224, 249), PackedInt32Array(249, 224, 242), PackedInt32Array(242, 224, 251), PackedInt32Array(242, 251, 241), PackedInt32Array(221, 222, 239), PackedInt32Array(239, 222, 253), PackedInt32Array(239, 253, 238), PackedInt32Array(238, 253, 252), PackedInt32Array(254, 252, 255), PackedInt32Array(255, 252, 253), PackedInt32Array(255, 253, 257), PackedInt32Array(255, 257, 256), PackedInt32Array(235, 258, 234), PackedInt32Array(234, 258, 201), PackedInt32Array(201, 258, 259), PackedInt32Array(201, 259, 200), PackedInt32Array(258, 261, 259), PackedInt32Array(259, 261, 260), PackedInt32Array(265, 264, 262), PackedInt32Array(262, 264, 263), PackedInt32Array(269, 268, 266), PackedInt32Array(266, 268, 267), PackedInt32Array(273, 272, 270), PackedInt32Array(270, 272, 271), PackedInt32Array(277, 276, 274), PackedInt32Array(274, 276, 275), PackedInt32Array(281, 280, 278), PackedInt32Array(278, 280, 279), PackedInt32Array(285, 284, 282), PackedInt32Array(282, 284, 283), PackedInt32Array(260, 261, 286), PackedInt32Array(286, 261, 287), PackedInt32Array(291, 290, 288), PackedInt32Array(288, 290, 289), PackedInt32Array(196, 197, 292), PackedInt32Array(292, 197, 293), PackedInt32Array(297, 296, 294), PackedInt32Array(294, 296, 295), PackedInt32Array(298, 247, 248), PackedInt32Array(298, 248, 299), PackedInt32Array(299, 248, 300), PackedInt32Array(301, 300, 302), PackedInt32Array(299, 300, 257), PackedInt32Array(257, 300, 256), PackedInt32Array(256, 300, 301), PackedInt32Array(245, 246, 303), PackedInt32Array(303, 246, 304), PackedInt32Array(292, 293, 305), PackedInt32Array(305, 306, 292), PackedInt32Array(292, 306, 308), PackedInt32Array(292, 308, 307), PackedInt32Array(287, 309, 286), PackedInt32Array(286, 309, 310), PackedInt32Array(310, 309, 312), PackedInt32Array(310, 312, 311), PackedInt32Array(309, 313, 312), PackedInt32Array(311, 314, 310), PackedInt32Array(303, 304, 315), PackedInt32Array(315, 304, 317), PackedInt32Array(315, 317, 316), PackedInt32Array(316, 318, 315), PackedInt32Array(306, 314, 308), PackedInt32Array(308, 314, 311), PackedInt32Array(313, 254, 312), PackedInt32Array(312, 254, 255), PackedInt32Array(302, 318, 301), PackedInt32Array(301, 318, 316)]
+vertices = PackedVector3Array(-69.5, -4.5, -69.5, -69.5, -4.5, 69.5, 69.5, -4.5, 69.5, 69.5, -4.5, -69.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dm3p"]
 diffuse_mode = 3
@@ -40,21 +41,22 @@ albedo_texture = ExtResource("5_xhmm7")
 metallic = 1.0
 metallic_texture = ExtResource("6_dicbw")
 normal_enabled = true
-normal_texture = ExtResource("7_gakwe")
-uv1_scale = Vector3(25, 25, 25)
+normal_texture = ExtResource("5_bvhno")
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [node name="SandBox" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(0.789151, -0.593741, -0.157205, 0.0473699, -0.196353, 0.979388, -0.61237, -0.780332, -0.126827, 0, 3, 0)
 light_bake_mode = 1
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fmykq")
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("1_po8uu")]
-transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, 0, 0.258819, 1, 7.24, 1)
+[node name="Player" parent="." instance=ExtResource("1_po8uu")]
+transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, 0, 0.258819, -50, 7.24, -3)
 mouse_senstivity = 0.1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
@@ -68,77 +70,11 @@ material_override = SubResource("StandardMaterial3D_2dm3p")
 use_collision = true
 size = Vector3(140, 10, 140)
 
-[node name="MeshInstance3D" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 45, 32)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D2" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 34.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D3" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D4" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D5" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D6" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D7" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D8" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D9" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D10" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 0.764999)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D11" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 19.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D12" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D13" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D14" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 7.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D15" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D16" parent="NavigationRegion3D/World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
 [node name="Enemy" parent="." instance=ExtResource("5_wrg01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -34)
 
-[node name="FpsCounter" parent="." instance=ExtResource("6_uwdu3")]
-
 [node name="Enemy2" parent="." instance=ExtResource("5_wrg01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3876, 0.837707, 6.75228)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3876, 0.837707, 7.75228)
 
 [node name="Enemy3" parent="." instance=ExtResource("5_wrg01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4479, 1, 15.0569)
@@ -147,334 +83,87 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4479, 1, 15.0569)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 1, -17)
 
 [node name="Enemy5" parent="." instance=ExtResource("5_wrg01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 30)
 
 [node name="Enemy6" parent="." instance=ExtResource("5_wrg01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, -19)
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
-quality = 3
-bounce_indirect_energy = 0.5
 light_data = ExtResource("8_76bmo")
 
-[node name="World" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 23, 90)
-
-[node name="Floor" type="CSGBox3D" parent="World"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-material_override = SubResource("StandardMaterial3D_2dm3p")
-use_collision = true
-size = Vector3(140, 10, 140)
-
-[node name="MeshInstance3D" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 45, 32)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D2" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 34.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D3" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D4" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D5" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D6" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D7" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D8" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D9" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D10" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 0.764999)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D11" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 19.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D12" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D13" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D14" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 7.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D15" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D16" parent="World" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="World2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 23, -88)
-
-[node name="Floor" type="CSGBox3D" parent="World2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-material_override = SubResource("StandardMaterial3D_2dm3p")
-use_collision = true
-size = Vector3(140, 10, 140)
-
-[node name="MeshInstance3D" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 45, 32)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D2" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 34.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D3" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D4" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D5" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D6" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D7" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D8" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D9" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D10" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 0.764999)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D11" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 19.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D12" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D13" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D14" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 7.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D15" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D16" parent="World2" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="World3" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.707107, 0.707107, 0, 0.707107, -0.707107, -1, -3.09086e-08, -3.09086e-08, -88, 23, 4)
-
-[node name="Floor" type="CSGBox3D" parent="World3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-material_override = SubResource("StandardMaterial3D_2dm3p")
-use_collision = true
-size = Vector3(140, 10, 140)
-
-[node name="MeshInstance3D" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 45, 32)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D2" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 34.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D3" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D4" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D5" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D6" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D7" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D8" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D9" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D10" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 0.764999)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D11" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 19.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D12" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D13" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D14" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 7.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D15" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D16" parent="World3" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="World4" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 3.09086e-08, -3.09086e-08, 87, 23, 4)
-
-[node name="Floor" type="CSGBox3D" parent="World4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-material_override = SubResource("StandardMaterial3D_2dm3p")
-use_collision = true
-size = Vector3(140, 10, 140)
-
-[node name="MeshInstance3D" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 45, 32)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D2" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 34.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D3" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D4" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, 17.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D5" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D6" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -10.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D7" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D8" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.615, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D9" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, -31.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D10" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 0.764999)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D11" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 19.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D12" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D13" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 33.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D14" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, 7.765)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D15" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D16" parent="World4" instance=ExtResource("9_uoh1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.385, 45, -22.235)
-skeleton = NodePath("../../..")
-
-[node name="PistolBullet" parent="." instance=ExtResource("10_iijef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, -4, 25)
-
-[node name="Op_bullets" parent="." instance=ExtResource("11_pfrro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -4, 38)
+[node name="Sniper_bullets" parent="." instance=ExtResource("11_pfrro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -4, 3)
 
 [node name="PistolBullet2" parent="." instance=ExtResource("10_iijef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -4, 8)
 
-[node name="Op_bullets2" parent="." instance=ExtResource("11_pfrro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -4, 30)
+[node name="PistolBullet" parent="." instance=ExtResource("10_iijef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -4, 21)
 
-[node name="Op_bullets3" parent="." instance=ExtResource("11_pfrro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, -4, -7)
+[node name="Sniper_bullets2" parent="." instance=ExtResource("11_pfrro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -4, 39)
+
+[node name="Sniper_bullets3" parent="." instance=ExtResource("11_pfrro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, -3, 17)
 
 [node name="PistolBullet3" parent="." instance=ExtResource("10_iijef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -4, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, -4, 25)
 
 [node name="PistolBullet4" parent="." instance=ExtResource("10_iijef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -4, -42)
-
-[node name="Op_bullets4" parent="." instance=ExtResource("11_pfrro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4, -43)
-
-[node name="Op_bullets5" parent="." instance=ExtResource("11_pfrro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -4, -42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, -4, -36)
 
 [node name="PistolBullet5" parent="." instance=ExtResource("10_iijef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, -4, -17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -4, -49)
+
+[node name="Sniper_bullets4" parent="." instance=ExtResource("11_pfrro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -3, -45)
+
+[node name="PistolBullet6" parent="." instance=ExtResource("10_iijef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, -4, -11)
+
+[node name="Sniper_bullets5" parent="." instance=ExtResource("11_pfrro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -4, 43)
+
+[node name="Enemy7" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, -4, 48)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, -4, 24)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -4, 51)
+
+[node name="Enemy10" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -4, 27)
+
+[node name="Enemy11" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4, 28)
+
+[node name="Enemy12" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -4, 40)
+
+[node name="Enemy13" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -4, 36)
+
+[node name="Enemy14" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, -4, 25)
+
+[node name="Enemy15" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -3, 1)
+
+[node name="Enemy16" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, -4, 11)
+
+[node name="Enemy17" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, -4, -18)
+
+[node name="Enemy18" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -4, -33)
+
+[node name="Enemy19" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -4, -65)
+
+[node name="Enemy20" parent="." instance=ExtResource("5_wrg01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, -3, -48)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("11_ybarg")]

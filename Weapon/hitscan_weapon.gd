@@ -12,6 +12,8 @@ extends Node3D
 @export var fire_sound:AudioStreamPlayer
 @export var is_shotgun:bool
 @export var is_pistol:bool
+@export var ammo_handler:AmmoHandler
+@export var ammo_type:AmmoHandler.AmmoType
 
 var can_shoot:=true
 
@@ -33,15 +35,17 @@ func _process(delta: float) -> void:
 		can_shoot=true
 	
 func shoot():
-	muzzle_flash.restart()
-	cool_down_timer.start(1.0/fire_rate)
-	fire_sound.play()
-	weapon_mesh.position.z+=recoil
-	var collider=ray_cast_3d.get_collider()
-	if ray_cast_3d.get_collider():
-		spawnSparks()
-	if collider is Enemy or collider is Player: 
-		collider.current_health-=weapon_damage
+	if ammo_handler.hasAmmo(ammo_type):
+		ammo_handler.useAmmo(ammo_type)
+		muzzle_flash.restart()
+		cool_down_timer.start(1.0/fire_rate)
+		fire_sound.play()
+		weapon_mesh.position.z+=recoil
+		var collider=ray_cast_3d.get_collider()
+		if ray_cast_3d.get_collider():
+			spawnSparks()
+		if collider is Enemy or collider is Player: 
+			collider.current_health-=weapon_damage
 		
 
 func spawnSparks():

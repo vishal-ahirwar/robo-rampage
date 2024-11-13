@@ -3,13 +3,13 @@
 [ext_resource type="Material" uid="uid://ck6vkamv8gj1l" path="res://Level/Material/OrangeMaterial.tres" id="1_apq5e"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cpq7i"]
-lightmap_size_hint = Vector2i(54, 1031)
+lightmap_size_hint = Vector2i(104, 456)
 material = ExtResource("1_apq5e")
 add_uv2 = true
-size = Vector3(5, 100, 5)
+size = Vector3(10, 40, 10)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mxooh"]
-points = PackedVector3Array(-2.5, -50, -2.5, -2.5, -50, 2.5, -2.5, 50, -2.5, 2.5, -50, -2.5, 2.5, -50, 2.5, -2.5, 50, 2.5, 2.5, 50, -2.5, 2.5, 50, 2.5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xa42t"]
+points = PackedVector3Array(-5, -20, -5, -5, -20, 5, -5, 20, -5, 5, -20, -5, 5, -20, 5, -5, 20, 5, 5, 20, -5, 5, 20, 5)
 
 [node name="MeshInstance3D" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_cpq7i")
@@ -17,4 +17,4 @@ mesh = SubResource("BoxMesh_cpq7i")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_mxooh")
+shape = SubResource("ConvexPolygonShape3D_xa42t")

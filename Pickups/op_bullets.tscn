@@ -8,7 +8,10 @@ albedo_color = Color(0.966909, 0.116348, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_mvmkj"]
 material = SubResource("StandardMaterial3D_7jjes")
 
-[node name="Op_bullets" instance=ExtResource("1_ddnsg")]
+[node name="Sniper_bullets" instance=ExtResource("1_ddnsg")]
+ammo_type = 1
+ammo_amount = 5
 
 [node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.65606, -0.75471, 0, 0.75471, 0.65606, 0, 0, 0)
 mesh = SubResource("BoxMesh_mvmkj")

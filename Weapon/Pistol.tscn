@@ -3,12 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bhjh0ttktd2ou" path="res://Weapon/hitscan_weapon.tscn" id="1_veg7k"]
 [ext_resource type="PackedScene" uid="uid://d1dbe0xfyjr3e" path="res://Assets/1911.fbx" id="2_aqnnc"]
 [ext_resource type="PackedScene" uid="uid://b6p3u1b3krlw8" path="res://Weapon/ParticleEffects/muzzle_flash.tscn" id="3_r0pg3"]
-[ext_resource type="AudioStream" uid="uid://cwxsi5nk4sdh" path="res://Audio/laser-shot-ingame-230500.mp3" id="4_tafpf"]
+[ext_resource type="AudioStream" uid="uid://l6evl0am62ir" path="res://Audio/pistol-shot.mp3" id="4_c4vx7"]
 
 [node name="Pistol" node_paths=PackedStringArray("weapon_mesh", "muzzle_flash", "fire_sound") instance=ExtResource("1_veg7k")]
+fire_rate = 7.0
 weapon_mesh = NodePath("1911")
 muzzle_flash = NodePath("MuzzleFlash")
+weapon_damage = 10
 fire_sound = NodePath("AudioStreamPlayer")
+is_pistol = true
 
 [node name="1911" parent="." index="1" instance=ExtResource("2_aqnnc")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.728, -0.45, -1.007)
@@ -40,6 +43,6 @@ cast_shadow = 0
 [node name="MuzzleFlash" parent="." index="3" instance=ExtResource("3_r0pg3")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
-stream = ExtResource("4_tafpf")
+stream = ExtResource("4_c4vx7")
 
 [editable path="1911"]

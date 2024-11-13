@@ -1,8 +1,8 @@
 extends CharacterBody3D
 class_name Enemy
-@onready var pistol: Node3D = $Drone2/Pistol
 
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $death_sound
+@onready var fire: AudioStreamPlayer = $fire
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -13,6 +13,8 @@ var provoked:=false
 @export var attack_range:=6.5
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var max_health:=100
+@onready var ray_cast_3d: RayCast3D = $RayCast3D
+@export var damage:=5
 var current_health:=max_health:
 	set(value):
 		current_health=value
@@ -25,7 +27,7 @@ var current_health:=max_health:
 func _ready() -> void:
 	player=get_tree().get_first_node_in_group("player")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(provoked):
 		navigation_agent_3d.target_position=player.global_position
 	
@@ -42,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		provoked=false
 	if(provoked):
-		if distance<=attack_range:
+		if distance<=attack_range and current_health>0:
 				animation_player.play("Attack")
 			
 	if direction:
@@ -60,12 +62,14 @@ func lookAtTarget(direction:Vector3)->void:
 	adjusted_direction.y=0
 	if global_position==adjusted_direction:
 		return
+	if position==global_position+adjusted_direction:
+		return
 	look_at(global_position+adjusted_direction,Vector3.UP,true)
 	
 
 func attack()->void:
-	pistol.shoot()
-
-
-func _on_audio_stream_player_finished() -> void:
-	queue_free()
+	fire.play()
+	var collider=ray_cast_3d.get_collider()
+	if collider is Player:
+		collider.current_health-=damage
+		

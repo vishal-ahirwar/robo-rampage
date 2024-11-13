@@ -11,20 +11,33 @@ var mouse_motion:=Vector2.ZERO
 var menu
 @onready var animationplay_damage: AnimationPlayer = $AnimationplayDamage
 @onready var game_over_menu: Control = $GameOverMenu
-@export var weapn_player_holding:Node3D
+
 @export var max_health:=100
+@onready var ammo_handler: AmmoHandler = $CamerPivot/Camera3D/AmmoHandler
+@onready var camera_3d: Camera3D = $CamerPivot/Camera3D
+@onready var fov:=camera_3d.fov
+@export var aim_multiplayer:=0.7
+@export var health:Label
 @export var current_health:=max_health:
 	set(value):
 		if value<current_health:
 			animationplay_damage.stop(false)	
 			animationplay_damage.play("damage_dealt")
 		current_health=value
+		updateHealthLabel(current_health)
 		if current_health<=0:
 			game_over_menu.gameOver()
 			
 func _ready() -> void:
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
-
+	updateHealthLabel(current_health)
+func updateHealthLabel(new_health:int):
+	health.text="H:"+str(new_health)
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("aim"):
+		camera_3d.fov=lerp(camera_3d.fov,fov*aim_multiplayer,delta*20)
+	else:
+		camera_3d.fov=lerp(camera_3d.fov,fov,delta*20)
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	handleMouseMotion(delta)
@@ -43,6 +56,9 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if Input.is_action_pressed("aim"):
+			velocity.x*=aim_multiplayer
+			velocity.z*=aim_multiplayer
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -52,10 +68,13 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
 		mouse_motion=-event.relative*mouse_senstivity
-		
+		if Input.is_action_pressed("aim"):
+			mouse_motion*=aim_multiplayer
+			
 	if event is InputEventScreenDrag:
 		mouse_motion=-event.relative*mouse_senstivity
-		
+		if Input.is_action_pressed("aim"):
+			mouse_motion*=aim_multiplayer
 	if event.is_action_pressed("menu"):
 		if menu:
 			remove_child(menu)
@@ -73,3 +92,15 @@ func handleMouseMotion(delta:float)->void:
 
 func _on_touch_screen_button_pressed() -> void:
 	Input.action_press("fire")
+
+
+func _on_scope_released() -> void:
+	Input.action_release("aim")
+
+
+func _on_scope_pressed() -> void:
+	Input.action_press("aim")
+
+
+func _on_jump_pressed() -> void:
+	Input.action_press("jump")

@@ -1,16 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://sjr7ypbyaxa2"]
+[gd_scene load_steps=21 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
+[ext_resource type="Script" path="res://Player/weapon_handler.gd" id="2_mtai0"]
+[ext_resource type="PackedScene" uid="uid://davymn0v6qhsb" path="res://Weapon/sniper.tscn" id="2_uoq18"]
 [ext_resource type="Script" path="res://Player/crosshair.gd" id="3_mk0k2"]
 [ext_resource type="PackedScene" uid="uid://d4nqal5rscypb" path="res://Weapon/Pistol.tscn" id="3_mnulb"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="5_7y88h"]
+[ext_resource type="Script" path="res://Player/ammo_handler.gd" id="5_cbk8m"]
 [ext_resource type="PackedScene" uid="uid://blitsm6xcqmm5" path="res://Player/GameOver.tscn" id="6_6me57"]
 [ext_resource type="Script" path="res://Player/touchButton.gd" id="6_63owl"]
 [ext_resource type="Texture2D" uid="uid://cux7msiamr7y2" path="res://Assets/damage.png" id="6_hp8yq"]
 [ext_resource type="Texture2D" uid="uid://c4r6xxx5eljvw" path="res://Assets/bullet.png" id="7_8b4xg"]
 [ext_resource type="Texture2D" uid="uid://t877y8hnhpnl" path="res://Assets/difficulties.png" id="8_slwyh"]
 [ext_resource type="Texture2D" uid="uid://bpa1sk341lghe" path="res://Assets/target.png" id="9_ow8br"]
-[ext_resource type="PackedScene" uid="uid://co3fklb3bkpkq" path="res://Assets/Drone.glb" id="11_hso45"]
+[ext_resource type="FontFile" uid="uid://c5llph0rwf51p" path="res://Assets/static/FunnelDisplay-Medium.ttf" id="15_bs8p7"]
+[ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="15_t47vs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lyf8u"]
 
@@ -75,24 +79,46 @@ _data = {
 "damage_dealt": SubResource("Animation_p76b7")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_pivot", "weapn_player_holding")]
+[sub_resource type="LabelSettings" id="LabelSettings_oncxj"]
+font = ExtResource("15_bs8p7")
+font_size = 64
+font_color = Color(0.670588, 0.745098, 1, 1)
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_pivot", "health") groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_m171r")
 camera_pivot = NodePath("CamerPivot")
-weapn_player_holding = NodePath("CamerPivot/Camera3D/Pistol")
+aim_multiplayer = 0.4
+health = NodePath("MarginContainer/health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_lyf8u")
 
 [node name="CamerPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374848, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CamerPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 cull_mask = 1048573
 
-[node name="Pistol" parent="CamerPivot/Camera3D" instance=ExtResource("3_mnulb")]
-fire_rate = 60.0
-is_pistol = true
+[node name="WeaponHandler" type="Node3D" parent="CamerPivot/Camera3D" node_paths=PackedStringArray("sniper", "pistol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+script = ExtResource("2_mtai0")
+sniper = NodePath("Sniper")
+pistol = NodePath("Pistol")
+
+[node name="Sniper" parent="CamerPivot/Camera3D/WeaponHandler" node_paths=PackedStringArray("ammo_handler") instance=ExtResource("2_uoq18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245, 0.844, -0.704)
+ammo_handler = NodePath("../../AmmoHandler")
+ammo_type = 1
+
+[node name="Pistol" parent="CamerPivot/Camera3D/WeaponHandler" node_paths=PackedStringArray("ammo_handler") instance=ExtResource("3_mnulb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.654, 0.181)
+ammo_handler = NodePath("../../AmmoHandler")
+
+[node name="AmmoHandler" type="Node" parent="CamerPivot/Camera3D" node_paths=PackedStringArray("ammo_label")]
+script = ExtResource("5_cbk8m")
+ammo_label = NodePath("../../../MarginContainer/ammo")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -100,21 +126,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Crosshair" type="Control" parent="CenterContainer"]
 layout_mode = 2
 script = ExtResource("3_mk0k2")
-
-[node name="Virtual Joystick" parent="." instance=ExtResource("5_7y88h")]
-visible = false
-offset_left = 225.0
-offset_top = -424.0
-offset_right = 440.0
-offset_bottom = -203.0
-action_left = "move_left"
-action_right = "move_right"
-action_up = "move_forward"
-action_down = "move_backward"
 
 [node name="damage" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -140,6 +156,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("6_63owl")
 
 [node name="Right" type="Control" parent="Control"]
@@ -156,35 +173,90 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="fire" type="TouchScreenButton" parent="Control/Right"]
-modulate = Color(1, 1, 1, 0.278431)
-position = Vector2(-382, 22.5)
+modulate = Color(0.627451, 0.713726, 1, 1)
+position = Vector2(-420, 94.5)
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("7_8b4xg")
 action = "fire"
 visibility_mode = 1
 
 [node name="jump" type="TouchScreenButton" parent="Control/Right"]
-modulate = Color(1, 1, 1, 0.278431)
-position = Vector2(-199, 222.5)
+modulate = Color(0.627451, 0.713726, 1, 1)
+position = Vector2(-222, 163.5)
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("8_slwyh")
 action = "jump"
 visibility_mode = 1
 
-[node name="scope" type="TouchScreenButton" parent="Control/Right"]
-modulate = Color(1, 1, 1, 0.278431)
-position = Vector2(-534, 231.5)
+[node name="Left" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="scope" type="TouchScreenButton" parent="Control/Left"]
+modulate = Color(0.627451, 0.713726, 1, 1)
+position = Vector2(305, 41)
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("9_ow8br")
-action = "zoom"
+action = "aim"
 visibility_mode = 1
+
+[node name="Virtual Joystick" parent="Control/Left" instance=ExtResource("5_7y88h")]
+layout_mode = 1
+offset_left = 89.0
+offset_top = 37.0
+offset_right = 304.0
+offset_bottom = 258.0
+mouse_filter = 2
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_backward"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="ammo" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "A:999
+"
+label_settings = SubResource("LabelSettings_oncxj")
+
+[node name="health" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "H:00"
+label_settings = SubResource("LabelSettings_oncxj")
+
+[node name="ChangeWeapon" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("15_t47vs")
+text = "Switch Weapon"
 
 [node name="GameOverMenu" parent="." instance=ExtResource("6_6me57")]
 visible = false
 
-[node name="Drone2" parent="." instance=ExtResource("11_hso45")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.195153, 0.283241)
-
 [connection signal="pressed" from="Control/Right/fire" to="." method="_on_touch_screen_button_pressed"]
-[connection signal="pressed" from="Control/Right/jump" to="." method="_on_touch_screen_button_pressed"]
-[connection signal="pressed" from="Control/Right/scope" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="Control/Right/jump" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="Control/Left/scope" to="." method="_on_scope_pressed"]
+[connection signal="released" from="Control/Left/scope" to="." method="_on_scope_released"]
+[connection signal="pressed" from="MarginContainer/ChangeWeapon" to="CamerPivot/Camera3D/WeaponHandler" method="_on_option_button_pressed"]
