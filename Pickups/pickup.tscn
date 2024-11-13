@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://cp5dmmlg1fo42"]
+
+[ext_resource type="Shader" uid="uid://56ga4w8625ck" path="res://Pickups/freshnal.tres" id="1_x0rpp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jjes"]
+albedo_color = Color(0.966909, 0.116348, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_26qyt"]
+material = SubResource("StandardMaterial3D_7jjes")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlyf1"]
+render_priority = 0
+shader = ExtResource("1_x0rpp")
+
+[sub_resource type="SphereMesh" id="SphereMesh_arbiq"]
+material = SubResource("ShaderMaterial_qlyf1")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6jrmj"]
+radius = 3.149
+
+[sub_resource type="Animation" id="Animation_fl54o"]
+resource_name = "idle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.1, 2.5),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector3(0.855211, 0, 0), Vector3(0.855211, 6.28319, 0), Vector3(0.855211, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ke0se"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.855211, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4q7j"]
+_data = {
+"RESET": SubResource("Animation_ke0se"),
+"idle": SubResource("Animation_fl54o")
+}
+
+[node name="Pickup" type="Area3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.656059, -0.75471, 0, 0.75471, 0.656059, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_26qyt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_arbiq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_6jrmj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p4q7j")
+}
+autoplay = "idle"

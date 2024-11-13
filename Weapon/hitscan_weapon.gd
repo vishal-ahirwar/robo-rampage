@@ -9,7 +9,7 @@ extends Node3D
 @onready var weapon_start_position:Vector3=weapon_mesh.position
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 @export var weapon_damage:=15
-
+@export var fire_sound:AudioStreamPlayer
 @export var is_shotgun:bool
 @export var is_pistol:bool
 
@@ -19,6 +19,7 @@ var can_shoot:=true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("fire"):
+		
 		if is_pistol or is_shotgun:
 			if cool_down_timer.is_stopped() and can_shoot:
 				shoot()
@@ -34,7 +35,7 @@ func _process(delta: float) -> void:
 func shoot():
 	muzzle_flash.restart()
 	cool_down_timer.start(1.0/fire_rate)
-	printt("fired",)
+	fire_sound.play()
 	weapon_mesh.position.z+=recoil
 	var collider=ray_cast_3d.get_collider()
 	if ray_cast_3d.get_collider():

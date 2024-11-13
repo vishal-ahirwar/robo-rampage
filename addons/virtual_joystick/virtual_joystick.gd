@@ -65,6 +65,9 @@ var _touch_index : int = -1
 # FUNCTIONS
 
 func _ready() -> void:
+	if OS.get_name()=="Android" or OS.get_name()=="iOS":
+		visible=true
+	
 	if ProjectSettings.get_setting("input_devices/pointing/emulate_mouse_from_touch"):
 		printerr("The Project Setting 'emulate_mouse_from_touch' should be set to False")
 	if not ProjectSettings.get_setting("input_devices/pointing/emulate_touch_from_mouse"):
@@ -72,6 +75,8 @@ func _ready() -> void:
 	
 	if not DisplayServer.is_touchscreen_available() and visibility_mode == Visibility_mode.TOUCHSCREEN_ONLY :
 		hide()
+	else:
+		ProjectSettings.set_setting("input/fire","None")
 	if visibility_mode == Visibility_mode.WHEN_TOUCHED:
 		hide()
 		

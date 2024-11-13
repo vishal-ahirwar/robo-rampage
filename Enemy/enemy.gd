@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Enemy
-@onready var pistol: Node3D = $Pistol
+@onready var pistol: Node3D = $Drone2/Pistol
+
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -15,7 +17,9 @@ var current_health:=max_health:
 	set(value):
 		current_health=value
 		if current_health<=0:
-			queue_free()
+			if not audio_stream_player.playing:
+				animation_player.play("dead")
+				audio_stream_player.play()
 		provoked=true
 
 func _ready() -> void:
@@ -39,7 +43,6 @@ func _physics_process(delta: float) -> void:
 		provoked=false
 	if(provoked):
 		if distance<=attack_range:
-			if not animation_player.is_playing():
 				animation_player.play("Attack")
 			
 	if direction:
@@ -62,3 +65,7 @@ func lookAtTarget(direction:Vector3)->void:
 
 func attack()->void:
 	pistol.shoot()
+
+
+func _on_audio_stream_player_finished() -> void:
+	queue_free()
