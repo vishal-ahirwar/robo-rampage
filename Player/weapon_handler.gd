@@ -44,5 +44,8 @@ func lastWeapon():
 
 
 
-func _on_option_button_pressed() -> void:
+func _on_change_weapon_pressed() -> void:
 	nextWeapon()
+
+func getWeaponAmmoType()->AmmoHandler.AmmoType:
+	return get_child(getCurrentIndex()).ammo_type

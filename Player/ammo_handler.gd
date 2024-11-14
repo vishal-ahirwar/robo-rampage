@@ -1,6 +1,7 @@
 extends Node
 class_name AmmoHandler
 @export var ammo_label:Label
+@export var weapon_handler:Node3D
 enum AmmoType {
 	PISTOL_BULLET,
 	SNIPER_BULLET
@@ -21,6 +22,7 @@ func useAmmo(type:AmmoType)->void:
 
 func updateAmmoLabel(type:AmmoType):
 	ammo_label.text=str(ammo_storage[type])
-
+	
 func addAmmo(type:AmmoType,ammo:int):
 	ammo_storage[type]+=ammo
+	updateAmmoLabel(weapon_handler.getWeaponAmmoType())

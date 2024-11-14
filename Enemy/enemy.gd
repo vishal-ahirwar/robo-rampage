@@ -32,6 +32,8 @@ func _process(_delta: float) -> void:
 		navigation_agent_3d.target_position=player.global_position
 	
 func _physics_process(delta: float) -> void:
+	if not player:
+		return
 	var next_position=navigation_agent_3d.get_next_path_position()
 	# Add the gravity.
 	if not is_on_floor():

@@ -14,12 +14,14 @@ extends Node3D
 @export var is_pistol:bool
 @export var ammo_handler:AmmoHandler
 @export var ammo_type:AmmoHandler.AmmoType
-
+@export var animation_player:AnimationPlayer
 var can_shoot:=true
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#if not weapon_enabled:
+		#print("weapon is not enabled")
+		#return
 	if Input.is_action_pressed("fire"):
 		
 		if is_pistol or is_shotgun:
@@ -53,3 +55,6 @@ func spawnSparks():
 	spark.global_position=ray_cast_3d.get_collision_point()
 	add_child(spark)
 	
+func _on_visibility_changed() -> void:
+	if visible:
+		animation_player.play("on_equip")

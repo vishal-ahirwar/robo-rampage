@@ -18,6 +18,7 @@ var menu
 @onready var fov:=camera_3d.fov
 @export var aim_multiplayer:=0.7
 @export var health:Label
+
 @export var current_health:=max_health:
 	set(value):
 		if value<current_health:
@@ -32,7 +33,8 @@ func _ready() -> void:
 	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	updateHealthLabel(current_health)
 func updateHealthLabel(new_health:int):
-	health.text="H:"+str(new_health)
+	health.text=str(new_health)
+	
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("aim"):
 		camera_3d.fov=lerp(camera_3d.fov,fov*aim_multiplayer,delta*20)
@@ -70,7 +72,6 @@ func _input(event: InputEvent) -> void:
 		mouse_motion=-event.relative*mouse_senstivity
 		if Input.is_action_pressed("aim"):
 			mouse_motion*=aim_multiplayer
-			
 	if event is InputEventScreenDrag:
 		mouse_motion=-event.relative*mouse_senstivity
 		if Input.is_action_pressed("aim"):

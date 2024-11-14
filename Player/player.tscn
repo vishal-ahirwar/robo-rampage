@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://sjr7ypbyaxa2"]
+[gd_scene load_steps=24 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
 [ext_resource type="Script" path="res://Player/weapon_handler.gd" id="2_mtai0"]
@@ -10,11 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://blitsm6xcqmm5" path="res://Player/GameOver.tscn" id="6_6me57"]
 [ext_resource type="Script" path="res://Player/touchButton.gd" id="6_63owl"]
 [ext_resource type="Texture2D" uid="uid://cux7msiamr7y2" path="res://Assets/damage.png" id="6_hp8yq"]
-[ext_resource type="Texture2D" uid="uid://c4r6xxx5eljvw" path="res://Assets/bullet.png" id="7_8b4xg"]
-[ext_resource type="Texture2D" uid="uid://t877y8hnhpnl" path="res://Assets/difficulties.png" id="8_slwyh"]
-[ext_resource type="Texture2D" uid="uid://bpa1sk341lghe" path="res://Assets/target.png" id="9_ow8br"]
+[ext_resource type="Texture2D" uid="uid://cemye7xjdt16p" path="res://Widget/Bullet(2).png" id="9_ushec"]
+[ext_resource type="Texture2D" uid="uid://c3jx2gw5en7w0" path="res://Widget/boy.png" id="10_cj2sb"]
+[ext_resource type="Texture2D" uid="uid://jwaxg7w36go" path="res://Widget/scope.png" id="11_54oca"]
 [ext_resource type="FontFile" uid="uid://c5llph0rwf51p" path="res://Assets/static/FunnelDisplay-Medium.ttf" id="15_bs8p7"]
+[ext_resource type="Texture2D" uid="uid://c3r77vdrnocii" path="res://Widget/heart power on.png" id="15_j4rlu"]
 [ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="15_t47vs"]
+[ext_resource type="Texture2D" uid="uid://c5wbqkrx1ietg" path="res://Widget/Bullet(1).png" id="16_55yqa"]
+[ext_resource type="Texture2D" uid="uid://cyo7apfdg2033" path="res://Widget/pistol.png" id="17_nhkrs"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lyf8u"]
 
@@ -89,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_m171r")
 camera_pivot = NodePath("CamerPivot")
 aim_multiplayer = 0.4
-health = NodePath("MarginContainer/health")
+health = NodePath("MarginContainer/HBoxContainer/health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_lyf8u")
@@ -116,9 +119,10 @@ ammo_type = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.654, 0.181)
 ammo_handler = NodePath("../../AmmoHandler")
 
-[node name="AmmoHandler" type="Node" parent="CamerPivot/Camera3D" node_paths=PackedStringArray("ammo_label")]
+[node name="AmmoHandler" type="Node" parent="CamerPivot/Camera3D" node_paths=PackedStringArray("ammo_label", "weapon_handler")]
 script = ExtResource("5_cbk8m")
-ammo_label = NodePath("../../../MarginContainer/ammo")
+ammo_label = NodePath("../../../MarginContainer/HBoxContainer2/ammo")
+weapon_handler = NodePath("../WeaponHandler")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -174,9 +178,10 @@ grow_vertical = 2
 
 [node name="fire" type="TouchScreenButton" parent="Control/Right"]
 modulate = Color(0.627451, 0.713726, 1, 1)
-position = Vector2(-420, 94.5)
+position = Vector2(-340, 256.5)
+rotation = 3.8659
 scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("7_8b4xg")
+texture_normal = ExtResource("9_ushec")
 action = "fire"
 visibility_mode = 1
 
@@ -184,7 +189,7 @@ visibility_mode = 1
 modulate = Color(0.627451, 0.713726, 1, 1)
 position = Vector2(-222, 163.5)
 scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("8_slwyh")
+texture_normal = ExtResource("10_cj2sb")
 action = "jump"
 visibility_mode = 1
 
@@ -202,7 +207,7 @@ grow_vertical = 2
 modulate = Color(0.627451, 0.713726, 1, 1)
 position = Vector2(305, 41)
 scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("9_ow8br")
+texture_normal = ExtResource("11_54oca")
 action = "aim"
 visibility_mode = 1
 
@@ -230,27 +235,53 @@ theme_override_constants/margin_top = 35
 theme_override_constants/margin_right = 35
 theme_override_constants/margin_bottom = 35
 
-[node name="ammo" type="Label" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-text = "A:999
-"
-label_settings = SubResource("LabelSettings_oncxj")
-
-[node name="health" type="Label" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-text = "H:00"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("15_j4rlu")
+expand_mode = 2
+
+[node name="health" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "00"
 label_settings = SubResource("LabelSettings_oncxj")
 
-[node name="ChangeWeapon" type="Button" parent="MarginContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("16_55yqa")
+expand_mode = 2
+
+[node name="ammo" type="Label" parent="MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "999
+"
+label_settings = SubResource("LabelSettings_oncxj")
+
+[node name="ChangeWeapon" type="TextureButton" parent="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = ExtResource("15_t47vs")
-text = "Switch Weapon"
+texture_normal = ExtResource("17_nhkrs")
+texture_pressed = ExtResource("17_nhkrs")
+texture_hover = ExtResource("17_nhkrs")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="GameOverMenu" parent="." instance=ExtResource("6_6me57")]
 visible = false
@@ -259,4 +290,4 @@ visible = false
 [connection signal="pressed" from="Control/Right/jump" to="." method="_on_jump_pressed"]
 [connection signal="pressed" from="Control/Left/scope" to="." method="_on_scope_pressed"]
 [connection signal="released" from="Control/Left/scope" to="." method="_on_scope_released"]
-[connection signal="pressed" from="MarginContainer/ChangeWeapon" to="CamerPivot/Camera3D/WeaponHandler" method="_on_option_button_pressed"]
+[connection signal="pressed" from="MarginContainer/ChangeWeapon" to="CamerPivot/Camera3D/WeaponHandler" method="_on_change_weapon_pressed"]
