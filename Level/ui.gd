@@ -1,13 +1,16 @@
 extends CanvasLayer
+@onready var setting: MarginContainer = $Setting
+@onready var main: MarginContainer = $Main
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	ProjectSettings.settings_changed.connect(settingChanged)
 
-
+func settingChanged():
+	print("setting updated")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -16,7 +19,8 @@ func _on_btn_start_pressed() -> void:
 
 
 func _on_btn_setting_pressed() -> void:
-	pass # Replace with function body.
+	main.visible=false
+	setting.visible=true
 
 
 func _on_btn_about_pressed() -> void:
@@ -24,4 +28,17 @@ func _on_btn_about_pressed() -> void:
 
 
 func _on_btn_quit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()
+
+
+func _on_btn_good_pressed() -> void:
+	ProjectSettings.set_setting("rendering/scaling_3d/scale",0.3)
+	get_viewport().scaling_3d_scale=ProjectSettings.get_setting("rendering/scaling_3d/scale")
+
+func _on_btn_better_pressed() -> void:
+	ProjectSettings.set_setting("rendering/scaling_3d/scale",0.5)
+	get_viewport().scaling_3d_scale=ProjectSettings.get_setting("rendering/scaling_3d/scale")
+
+func _on_btn_best_pressed() -> void:
+	ProjectSettings.set_setting("rendering/scaling_3d/scale",1.0)
+	get_viewport().scaling_3d_scale=ProjectSettings.get_setting("rendering/scaling_3d/scale")

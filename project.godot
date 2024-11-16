@@ -21,7 +21,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://GameManager/game_manager.gd"
-_CameraShake3D="*res://addons/CameraShake3D/CameraShake3D/CameraShake3DNode.gd"
 
 [display]
 
@@ -30,7 +29,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/CameraShake3D/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
@@ -71,8 +70,7 @@ pickup={
 }
 fire={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(242, 11),"global_position":Vector2(251, 57),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
-]
+"events": []
 }
 reload={
 "deadzone": 0.5,
@@ -123,6 +121,7 @@ pointing/emulate_touch_from_mouse=true
 
 occlusion_culling/bvh_build_quality=0
 textures/canvas_textures/default_texture_filter=3
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
 textures/lossless_compression/force_png=true
 textures/decals/filter=2

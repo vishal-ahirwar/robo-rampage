@@ -22,6 +22,7 @@ var current_health:=max_health:
 			if not audio_stream_player.playing:
 				animation_player.play("dead")
 				audio_stream_player.play()
+				GameManager.addKill()
 		provoked=true
 
 func _ready() -> void:

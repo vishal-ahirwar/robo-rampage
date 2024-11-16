@@ -761,7 +761,7 @@ transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("26_6kbgj")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
+[node name="Main" type="MarginContainer" parent="UI"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -772,66 +772,118 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Main"]
 custom_minimum_size = Vector2(256, 256)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 theme_override_constants/separation = 15
 
-[node name="Label" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="UI/Main/VBoxContainer"]
 layout_mode = 2
 text = "Main Menu"
 label_settings = SubResource("LabelSettings_up55n")
 horizontal_alignment = 1
 
-[node name="btnStart" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="btnStart" type="Button" parent="UI/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("26_js4no")
 text = "Start"
 
-[node name="btnSetting" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="btnSetting" type="Button" parent="UI/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("26_js4no")
 text = "Setting"
 
-[node name="btnAbout" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="btnAbout" type="Button" parent="UI/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("26_js4no")
 text = "About"
 
-[node name="btnQuit" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="btnQuit" type="Button" parent="UI/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("26_js4no")
 text = "Quit"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="UI/MarginContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/Main"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="Label2" type="Label" parent="UI/MarginContainer/VBoxContainer2"]
+[node name="Label2" type="Label" parent="UI/Main/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Y.A.Y.Y"
 label_settings = SubResource("LabelSettings_mw6n0")
 
-[node name="Label" type="Label" parent="UI/MarginContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="UI/Main/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Copyright(c) Valiant Play."
 label_settings = SubResource("LabelSettings_gd4xt")
 
+[node name="Setting" type="MarginContainer" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Setting"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="UI/Setting/VBoxContainer"]
+layout_mode = 2
+text = "Graphics Setting"
+label_settings = SubResource("LabelSettings_up55n")
+horizontal_alignment = 1
+
+[node name="btnGood" type="Button" parent="UI/Setting/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("26_js4no")
+text = "Good
+"
+
+[node name="btnBetter" type="Button" parent="UI/Setting/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("26_js4no")
+text = "Better
+"
+
+[node name="btnBest" type="Button" parent="UI/Setting/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("26_js4no")
+text = "Best
+"
+
+[node name="btnQuit" type="Button" parent="UI/Setting/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("26_js4no")
+text = "Back to Menu"
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 light_data = ExtResource("30_hbg8y")
 
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/btnStart" to="UI" method="_on_btn_start_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/btnSetting" to="UI" method="_on_btn_setting_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/btnAbout" to="UI" method="_on_btn_about_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/btnQuit" to="UI" method="_on_btn_quit_pressed"]
+[connection signal="pressed" from="UI/Main/VBoxContainer/btnStart" to="UI" method="_on_btn_start_pressed"]
+[connection signal="pressed" from="UI/Main/VBoxContainer/btnSetting" to="UI" method="_on_btn_setting_pressed"]
+[connection signal="pressed" from="UI/Main/VBoxContainer/btnAbout" to="UI" method="_on_btn_about_pressed"]
+[connection signal="pressed" from="UI/Main/VBoxContainer/btnQuit" to="UI" method="_on_btn_quit_pressed"]
+[connection signal="pressed" from="UI/Setting/VBoxContainer/btnGood" to="UI" method="_on_btn_good_pressed"]
+[connection signal="pressed" from="UI/Setting/VBoxContainer/btnBetter" to="UI" method="_on_btn_better_pressed"]
+[connection signal="pressed" from="UI/Setting/VBoxContainer/btnBest" to="UI" method="_on_btn_best_pressed"]
+[connection signal="pressed" from="UI/Setting/VBoxContainer/btnQuit" to="PistolBullet" method="_on_btn_quit_pressed"]

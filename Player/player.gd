@@ -12,14 +12,13 @@ var menu
 @onready var animationplay_damage: AnimationPlayer = $AnimationplayDamage
 @onready var game_over_menu: Control = $GameOverMenu
 
-@export var max_health:=100
+@export var max_health:int
 @onready var ammo_handler: AmmoHandler = $CamerPivot/Camera3D/AmmoHandler
 @onready var camera_3d: Camera3D = $CamerPivot/Camera3D
 @onready var fov:=camera_3d.fov
 @export var aim_multiplayer:=0.7
 @export var health:Label
-
-@export var current_health:=max_health:
+@onready var current_health:=max_health:
 	set(value):
 		if value<current_health:
 			animationplay_damage.stop(false)	

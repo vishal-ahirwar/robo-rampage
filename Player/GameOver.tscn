@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://blitsm6xcqmm5"]
+[gd_scene load_steps=7 format=3 uid="uid://blitsm6xcqmm5"]
 
 [ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="1_b2r2o"]
 [ext_resource type="Shader" path="res://Player/blur.gdshader" id="2_dh436"]
 [ext_resource type="Script" path="res://Player/game_over.gd" id="2_rygir"]
+[ext_resource type="PackedScene" uid="uid://ttnlrghcyjg4" path="res://Spawner/fade_effects.tscn" id="4_twbfp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kqq3j"]
 shader = ExtResource("2_dh436")
@@ -21,6 +22,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_b2r2o")
 script = ExtResource("2_rygir")
+
+[node name="FadeEffects" parent="." instance=ExtResource("4_twbfp")]
 
 [node name="BlurBackround" type="TextureRect" parent="."]
 modulate = Color(0.0338533, 0.0338533, 0.0338533, 1)
@@ -58,9 +61,14 @@ theme_override_constants/separation = 25
 layout_mode = 2
 text = "Try Again"
 
+[node name="BtnMenu" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
 [node name="BtnGaveUp" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Give up"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BtnTryAgain" to="." method="_on_btn_try_again_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnMenu" to="." method="_on_btn_menu_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BtnGaveUp" to="." method="_on_btn_gave_up_pressed"]

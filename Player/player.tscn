@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://sjr7ypbyaxa2"]
+[gd_scene load_steps=26 format=3 uid="uid://sjr7ypbyaxa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_m171r"]
 [ext_resource type="Script" path="res://Player/weapon_handler.gd" id="2_mtai0"]
@@ -18,6 +18,8 @@
 [ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="15_t47vs"]
 [ext_resource type="Texture2D" uid="uid://c5wbqkrx1ietg" path="res://Widget/Bullet(1).png" id="16_55yqa"]
 [ext_resource type="Texture2D" uid="uid://cyo7apfdg2033" path="res://Widget/pistol.png" id="17_nhkrs"]
+[ext_resource type="Texture2D" uid="uid://c7ak0fvdulkps" path="res://Widget/skull-icon.png" id="18_whhkj"]
+[ext_resource type="Script" path="res://Player/kills.gd" id="19_5vr7d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lyf8u"]
 
@@ -91,6 +93,7 @@ font_color = Color(0.670588, 0.745098, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_m171r")
 camera_pivot = NodePath("CamerPivot")
+max_health = 10
 aim_multiplayer = 0.4
 health = NodePath("MarginContainer/HBoxContainer/health")
 
@@ -103,6 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374848, 0)
 [node name="Camera3D" type="Camera3D" parent="CamerPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 cull_mask = 1048573
+far = 500.0
 
 [node name="WeaponHandler" type="Node3D" parent="CamerPivot/Camera3D" node_paths=PackedStringArray("sniper", "pistol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -282,6 +286,22 @@ texture_pressed = ExtResource("17_nhkrs")
 texture_hover = ExtResource("17_nhkrs")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("18_whhkj")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer3"]
+layout_mode = 2
+text = "999"
+label_settings = SubResource("LabelSettings_oncxj")
+script = ExtResource("19_5vr7d")
 
 [node name="GameOverMenu" parent="." instance=ExtResource("6_6me57")]
 visible = false

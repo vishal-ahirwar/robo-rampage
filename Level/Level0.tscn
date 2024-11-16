@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://b2ntbg4d2f2i0"]
+[gd_scene load_steps=36 format=3 uid="uid://b2ntbg4d2f2i0"]
 
+[ext_resource type="Script" path="res://Level/level_0.gd" id="1_m286q"]
 [ext_resource type="Texture2D" uid="uid://u8o8knhfe83s" path="res://Assets/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_nhri6"]
 [ext_resource type="PackedScene" uid="uid://sjr7ypbyaxa2" path="res://Player/player.tscn" id="1_po8uu"]
 [ext_resource type="Material" uid="uid://q5ugr7qf0b3a" path="res://Level/Material/BackGrounfMaterial.tres" id="3_q17rl"]
@@ -25,9 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://ula6f2hvnbmf" path="res://fbx/decoration/nature/trees_B_medium.fbx" id="26_u6t12"]
 [ext_resource type="PackedScene" uid="uid://lctr5rc06xfh" path="res://fbx/decoration/nature/trees_B_small.fbx" id="27_dfkul"]
 [ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="28_cc5x1"]
+[ext_resource type="PackedScene" uid="uid://db817ea08vogq" path="res://Spawner/spawner.tscn" id="28_ta17v"]
 [ext_resource type="PackedScene" uid="uid://caps0xkxj31fc" path="res://fbx/decoration/nature/tree_single_A.fbx" id="28_yh72l"]
 [ext_resource type="PackedScene" uid="uid://cy1fvgqoixl2w" path="res://fbx/decoration/nature/mountain_B_grass.fbx" id="29_oxxpt"]
-[ext_resource type="PackedScene" uid="uid://clwx513x35xv0" path="res://fbx/decoration/nature/cloud_big.fbx" id="30_3323t"]
+[ext_resource type="PackedScene" uid="uid://ttnlrghcyjg4" path="res://Spawner/fade_effects.tscn" id="29_q4vc8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ij33q"]
 panorama = ExtResource("1_nhri6")
@@ -57,6 +59,7 @@ polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 size = Vector3(25, 10, 1)
 
 [node name="SandBox" type="Node3D"]
+script = ExtResource("1_m286q")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.789151, -0.593741, -0.157205, 0.0473699, -0.196353, 0.979388, -0.61237, -0.780332, -0.126827, 0, 3, 0)
@@ -100,6 +103,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 30)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, -19)
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 3
+directional = true
 light_data = ExtResource("8_76bmo")
 
 [node name="Sniper_bullets" parent="." instance=ExtResource("11_pfrro")]
@@ -477,358 +482,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22, -5, 36)
 [node name="mountain_B_grass" parent="." instance=ExtResource("29_oxxpt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, -5, 44)
 
-[node name="cloud_big" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 8, -31)
-
-[node name="cloud_big2" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1, 8, -31)
-
-[node name="cloud_big3" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -24)
-
-[node name="cloud_big4" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -39)
-
-[node name="cloud_big5" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11, 8, -39)
-
-[node name="cloud_big6" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 8, -5)
-
-[node name="cloud_big7" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1, 8, -5)
-
-[node name="cloud_big8" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, 2)
-
-[node name="cloud_big9" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -13)
-
-[node name="cloud_big10" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11, 8, -13)
-
-[node name="cloud_big11" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 8, -17)
-
-[node name="cloud_big12" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -17)
-
-[node name="cloud_big13" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, -10)
-
-[node name="cloud_big14" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, -25)
-
-[node name="cloud_big15" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -25)
-
-[node name="cloud_big16" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 30)
-
-[node name="cloud_big17" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, 30)
-
-[node name="cloud_big18" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 37)
-
-[node name="cloud_big19" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 22)
-
-[node name="cloud_big20" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 22)
-
-[node name="cloud_big21" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 56)
-
-[node name="cloud_big22" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, 56)
-
-[node name="cloud_big23" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 63)
-
-[node name="cloud_big24" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 48)
-
-[node name="cloud_big25" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 48)
-
-[node name="cloud_big26" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8, 44)
-
-[node name="cloud_big27" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -45, 8, 44)
-
-[node name="cloud_big28" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35, 8, 51)
-
-[node name="cloud_big29" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35, 8, 36)
-
-[node name="cloud_big30" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 36)
-
-[node name="cloud_big31" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, 7)
-
-[node name="cloud_big32" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, 7)
-
-[node name="cloud_big33" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 14)
-
-[node name="cloud_big34" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -1)
-
-[node name="cloud_big35" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -1)
-
-[node name="cloud_big36" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, 33)
-
-[node name="cloud_big37" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, 33)
-
-[node name="cloud_big38" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 40)
-
-[node name="cloud_big39" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 25)
-
-[node name="cloud_big40" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, 25)
-
-[node name="cloud_big41" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, 21)
-
-[node name="cloud_big42" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11, 8, 21)
-
-[node name="cloud_big43" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, 28)
-
-[node name="cloud_big44" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, 13)
-
-[node name="cloud_big45" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 1, 8, 13)
-
-[node name="cloud_big46" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, -41)
-
-[node name="cloud_big47" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, -41)
-
-[node name="cloud_big48" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -34)
-
-[node name="cloud_big49" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -49)
-
-[node name="cloud_big50" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -49)
-
-[node name="cloud_big51" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, -15)
-
-[node name="cloud_big52" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, -15)
-
-[node name="cloud_big53" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -8)
-
-[node name="cloud_big54" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -23)
-
-[node name="cloud_big55" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -23)
-
-[node name="cloud_big56" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -27)
-
-[node name="cloud_big57" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11, 8, -27)
-
-[node name="cloud_big58" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, -20)
-
-[node name="cloud_big59" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, -35)
-
-[node name="cloud_big60" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 1, 8, -35)
-
-[node name="cloud_big61" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -41)
-
-[node name="cloud_big62" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -41)
-
-[node name="cloud_big63" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -34)
-
-[node name="cloud_big64" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -49)
-
-[node name="cloud_big65" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -49)
-
-[node name="cloud_big66" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -15)
-
-[node name="cloud_big67" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -15)
-
-[node name="cloud_big68" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -8)
-
-[node name="cloud_big69" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -23)
-
-[node name="cloud_big70" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -23)
-
-[node name="cloud_big71" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 8, -27)
-
-[node name="cloud_big72" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65, 8, -27)
-
-[node name="cloud_big73" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, -20)
-
-[node name="cloud_big74" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, -35)
-
-[node name="cloud_big75" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -75, 8, -35)
-
-[node name="cloud_big76" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -4)
-
-[node name="cloud_big77" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -4)
-
-[node name="cloud_big78" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 3)
-
-[node name="cloud_big79" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -12)
-
-[node name="cloud_big80" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -12)
-
-[node name="cloud_big81" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, 22)
-
-[node name="cloud_big82" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, 22)
-
-[node name="cloud_big83" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 29)
-
-[node name="cloud_big84" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 14)
-
-[node name="cloud_big85" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, 14)
-
-[node name="cloud_big86" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 8, 10)
-
-[node name="cloud_big87" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65, 8, 10)
-
-[node name="cloud_big88" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 17)
-
-[node name="cloud_big89" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 2)
-
-[node name="cloud_big90" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -75, 8, 2)
-
-[node name="cloud_big91" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -89, 2, -64)
-
-[node name="cloud_big92" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 2, -39)
-
-[node name="cloud_big93" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -95, 2, -12)
-
-[node name="cloud_big94" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 2, 10)
-
-[node name="cloud_big95" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 11, 16)
-
-[node name="cloud_big96" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 4, 48)
-
-[node name="cloud_big97" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 4, 74)
-
-[node name="cloud_big98" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -72, 2, 82.4286)
-
-[node name="cloud_big99" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -47, 2, 77.4286)
-
-[node name="cloud_big100" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -20, 2, 88.4286)
-
-[node name="cloud_big101" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 2, 2, 77.4286)
-
-[node name="cloud_big102" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 8, 11, 77.4286)
-
-[node name="cloud_big103" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 40, 4, 77.4286)
-
-[node name="cloud_big104" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 66, 4, 77.4286)
-
-[node name="cloud_big105" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -72, 2, -74.5714)
-
-[node name="cloud_big106" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -47, 2, -79.5714)
-
-[node name="cloud_big107" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -20, 2, -68.5714)
-
-[node name="cloud_big108" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 2, 2, -79.5714)
-
-[node name="cloud_big109" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 8, 11, -79.5714)
-
-[node name="cloud_big110" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 40, 4, -79.5714)
-
-[node name="cloud_big111" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 66, 4, -79.5714)
-
-[node name="cloud_big112" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 80, 2, -75)
-
-[node name="cloud_big113" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 2, -50)
-
-[node name="cloud_big114" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 74, 2, -23)
-
-[node name="cloud_big115" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 2, -0.999992)
-
-[node name="cloud_big116" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 11, 5.00001)
-
-[node name="cloud_big117" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 4, 37)
-
-[node name="cloud_big118" parent="." instance=ExtResource("30_3323t")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 4, 63)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("28_cc5x1")]
+
+[node name="Spawner" parent="." instance=ExtResource("28_ta17v")]
+
+[node name="FadeEffects" parent="." instance=ExtResource("29_q4vc8")]
