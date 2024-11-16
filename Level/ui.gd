@@ -42,3 +42,8 @@ func _on_btn_better_pressed() -> void:
 func _on_btn_best_pressed() -> void:
 	ProjectSettings.set_setting("rendering/scaling_3d/scale",1.0)
 	get_viewport().scaling_3d_scale=ProjectSettings.get_setting("rendering/scaling_3d/scale")
+
+
+func _on_btn_back_to_menu_pressed() -> void:
+	setting.visible=false
+	main.visible=true
