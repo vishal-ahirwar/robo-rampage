@@ -3,8 +3,8 @@ class_name Enemy
 
 @onready var audio_stream_player: AudioStreamPlayer = $death_sound
 @onready var fire: AudioStreamPlayer = $fire
-
-const SPEED = 5.0
+@export var drops:Array[PackedScene]
+@export var SPEED := 5.0
 const JUMP_VELOCITY = 4.5
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 var player
@@ -19,10 +19,12 @@ var current_health:=max_health:
 	set(value):
 		current_health=value
 		if current_health<=0:
+			
 			if not audio_stream_player.playing:
 				animation_player.play("dead")
 				audio_stream_player.play()
 				GameManager.addKill()
+		
 		provoked=true
 
 func _ready() -> void:
@@ -76,3 +78,10 @@ func attack()->void:
 	if collider is Player:
 		collider.current_health-=damage
 		
+
+func drop():
+	var pick=drops.pick_random().instantiate()
+	pick.position=position
+	printt(pick.name,pick.position)
+	get_parent().add_child(pick)
+	queue_free()

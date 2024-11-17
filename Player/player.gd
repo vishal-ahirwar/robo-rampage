@@ -3,7 +3,7 @@ class_name Player
 @export
 var mouse_senstivity:=0.4
 @export var camera_pivot:Node3D
-const SPEED = 5.0
+@export var SPEED = 5.0
 @export var jump_height:=1.0
 @export var fall_multiplier:=4.4
 var gravity:float=ProjectSettings.get_setting("physics/3d/default_gravity")
