@@ -1,6 +1,7 @@
 extends CanvasLayer
 @onready var setting: MarginContainer = $Setting
 @onready var main: MarginContainer = $Main
+@onready var fade_effects: CanvasLayer = $"../FadeEffects"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +16,10 @@ func _process(_delta: float) -> void:
 
 
 func _on_btn_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Level/Level0.tscn")
+	fade_effects.fadeIn()
+	var start_timer:SceneTreeTimer=get_tree().create_timer(1.0)
+	start_timer.timeout.connect(get_tree().change_scene_to_file.bind("res://Level/Level0.tscn"))
+	
 
 
 func _on_btn_setting_pressed() -> void:

@@ -11,11 +11,11 @@ config_version=5
 [application]
 
 config/name="Robo Rampage"
+config/tags=PackedStringArray("3d", "fps", "mobile", "pc")
 run/main_scene="res://Level/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://VALIANT PLAY(3).png"
-boot_splash/fullsize=false
+boot_splash/bg_color=Color(0.0705882, 0.0666667, 0.0666667, 1)
+boot_splash/image="res://logo-color.png"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -70,8 +70,7 @@ pickup={
 }
 fire={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(123, 12),"global_position":Vector2(132, 58),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
-]
+"events": []
 }
 reload={
 "deadzone": 0.5,
@@ -122,9 +121,11 @@ pointing/emulate_touch_from_mouse=true
 
 occlusion_culling/bvh_build_quality=0
 textures/canvas_textures/default_texture_filter=3
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
 textures/lossless_compression/force_png=true
 textures/decals/filter=2
 textures/light_projectors/filter=2
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 anti_aliasing/quality/msaa_3d=1
 occlusion_culling/use_occlusion_culling=true

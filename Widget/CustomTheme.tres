@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cvjyqpf37mc22"]
 
-[ext_resource type="FontFile" uid="uid://lnda6gv0yvyd" path="res://Assets/static/FunnelDisplay-Regular.ttf" id="1_s0dkv"]
+[ext_resource type="FontFile" uid="uid://wbhr3644im1h" path="res://Assets/static/FunnelDisplay-Regular.ttf" id="1_s0dkv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwswo"]
 bg_color = Color(0.6, 0.690196, 1, 1)

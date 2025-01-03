@@ -1,13 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://d4nqal5rscypb"]
 
 [ext_resource type="PackedScene" uid="uid://bhjh0ttktd2ou" path="res://Weapon/hitscan_weapon.tscn" id="1_veg7k"]
-[ext_resource type="PackedScene" uid="uid://d1dbe0xfyjr3e" path="res://Assets/1911.fbx" id="2_aqnnc"]
+[ext_resource type="PackedScene" uid="uid://dsqrebm0uru8u" path="res://Assets/1911.fbx" id="2_aqnnc"]
 [ext_resource type="PackedScene" uid="uid://b6p3u1b3krlw8" path="res://Weapon/ParticleEffects/muzzle_flash.tscn" id="3_r0pg3"]
-[ext_resource type="AudioStream" uid="uid://l6evl0am62ir" path="res://Audio/pistol-shot.mp3" id="4_c4vx7"]
+[ext_resource type="AudioStream" uid="uid://ph6chubsv0jq" path="res://Audio/pistol-shot.mp3" id="4_c4vx7"]
 [ext_resource type="Material" uid="uid://7ct4sr5g6ox0" path="res://Weapon/gun_material.tres" id="5_pyyiu"]
 
 [sub_resource type="Animation" id="Animation_koxwq"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,7 +22,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_4eyms"]
 resource_name = "on_equip"
-length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -31,7 +29,7 @@ tracks/0/path = NodePath("Node3D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.5708, 0, 0), Vector3(0, 0, 0)]

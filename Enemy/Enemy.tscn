@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_6dpa5"]
 [ext_resource type="PackedScene" uid="uid://bs2y7igx6r1t0" path="res://Pickups/op_bullets.tscn" id="2_tentn"]
-[ext_resource type="Texture2D" uid="uid://calqa043mvdc2" path="res://Assets/Drone_Palette-Colour-Base.png" id="3_3ccc3"]
-[ext_resource type="PackedScene" uid="uid://co3fklb3bkpkq" path="res://Assets/Drone.glb" id="3_7cvj4"]
+[ext_resource type="Texture2D" uid="uid://gtvm3vuc4fdn" path="res://Assets/Drone_Palette-Colour-Base.png" id="3_3ccc3"]
+[ext_resource type="PackedScene" uid="uid://dx4u0i6qpnmtt" path="res://Assets/Drone.glb" id="3_7cvj4"]
 [ext_resource type="PackedScene" uid="uid://xucpinnbno77" path="res://Pickups/pistol_bullet.tscn" id="3_smlts"]
-[ext_resource type="Texture2D" uid="uid://dcgtjcegmkomf" path="res://Assets/Drone_Palette-roughness.png" id="4_1sm7y"]
-[ext_resource type="AudioStream" uid="uid://b4n0lhq6xf611" path="res://Assets/anime-ahh.mp3" id="4_jqsk7"]
-[ext_resource type="AudioStream" uid="uid://cwxsi5nk4sdh" path="res://Audio/laser-shot-ingame-230500.mp3" id="6_k8kan"]
+[ext_resource type="Texture2D" uid="uid://dmlp8nc2mf7nc" path="res://Assets/Drone_Palette-roughness.png" id="4_1sm7y"]
+[ext_resource type="AudioStream" uid="uid://d557gkbs7xw6" path="res://Assets/anime-ahh.mp3" id="4_jqsk7"]
+[ext_resource type="AudioStream" uid="uid://bu5145nvdvtwv" path="res://Audio/laser-shot-ingame-230500.mp3" id="6_k8kan"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kyx24"]
 

@@ -1,34 +1,30 @@
-[gd_scene load_steps=38 format=3 uid="uid://ctalhrp5cgsi"]
+[gd_scene load_steps=36 format=3 uid="uid://ctalhrp5cgsi"]
 
-[ext_resource type="Texture2D" uid="uid://cl7tsm0711ffp" path="res://Assets/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_072t7"]
+[ext_resource type="Texture2D" uid="uid://dp7b3ht4bdvf8" path="res://Assets/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_072t7"]
 [ext_resource type="Material" uid="uid://q5ugr7qf0b3a" path="res://Level/Material/BackGrounfMaterial.tres" id="3_u518g"]
 [ext_resource type="PackedScene" uid="uid://cx6kask8i3jr7" path="res://Enemy/Enemy.tscn" id="4_73lrp"]
 [ext_resource type="PackedScene" uid="uid://bs2y7igx6r1t0" path="res://Pickups/op_bullets.tscn" id="6_cl6ya"]
 [ext_resource type="PackedScene" uid="uid://xucpinnbno77" path="res://Pickups/pistol_bullet.tscn" id="7_t4ltj"]
-[ext_resource type="PackedScene" uid="uid://crvwr8d2lwhj2" path="res://fbx/decoration/nature/hills_A.fbx" id="8_pxmyo"]
-[ext_resource type="PackedScene" uid="uid://cn0t31nlq8vwx" path="res://fbx/decoration/nature/hills_A_trees.fbx" id="9_w13g2"]
-[ext_resource type="PackedScene" uid="uid://bsub1ypke8r61" path="res://fbx/decoration/nature/hills_B.fbx" id="10_i3m17"]
-[ext_resource type="PackedScene" uid="uid://dm01amivq7bmd" path="res://fbx/decoration/nature/hills_B_trees.fbx" id="11_t8p77"]
-[ext_resource type="PackedScene" uid="uid://befqjhntkkjdq" path="res://fbx/decoration/nature/hills_C.fbx" id="12_cus7t"]
-[ext_resource type="PackedScene" uid="uid://dn7mwdwang2fd" path="res://fbx/decoration/nature/mountain_B_grass_trees.fbx" id="13_f30bm"]
-[ext_resource type="PackedScene" uid="uid://ckx0wvx81srm0" path="res://fbx/decoration/nature/mountain_C.fbx" id="14_lugu1"]
-[ext_resource type="PackedScene" uid="uid://byneycjvo8r32" path="res://fbx/decoration/nature/mountain_C_grass_trees.fbx" id="15_f8kai"]
-[ext_resource type="PackedScene" uid="uid://cdo8wc85t6w5c" path="res://fbx/decoration/nature/rock_single_B.fbx" id="16_qekny"]
-[ext_resource type="PackedScene" uid="uid://cccxvmqmgfrbc" path="res://fbx/decoration/nature/rock_single_C.fbx" id="17_o6664"]
-[ext_resource type="PackedScene" uid="uid://bvnbynl1xv48w" path="res://fbx/decoration/nature/rock_single_D.fbx" id="18_wwcrx"]
-[ext_resource type="PackedScene" uid="uid://cqoll4jluk6ra" path="res://fbx/decoration/nature/rock_single_E.fbx" id="19_ph8lc"]
-[ext_resource type="PackedScene" uid="uid://m4i3j2cflepy" path="res://fbx/decoration/nature/trees_A_cut.fbx" id="20_5nmty"]
-[ext_resource type="PackedScene" uid="uid://j8hjfl0pmnt8" path="res://fbx/decoration/nature/trees_A_large.fbx" id="21_3seta"]
-[ext_resource type="PackedScene" uid="uid://bfev7y2hfkbfg" path="res://fbx/decoration/nature/trees_B_large.fbx" id="22_a2gy0"]
-[ext_resource type="PackedScene" uid="uid://4g4rg5xfmo7t" path="res://fbx/decoration/nature/trees_B_medium.fbx" id="23_hx1kb"]
-[ext_resource type="PackedScene" uid="uid://bhq3e0rfefjdx" path="res://fbx/decoration/nature/trees_B_small.fbx" id="24_deohu"]
-[ext_resource type="PackedScene" uid="uid://bi0blqrprtcb" path="res://fbx/decoration/nature/tree_single_A.fbx" id="25_52rui"]
+[ext_resource type="PackedScene" uid="uid://i6ysqy3c5li6" path="res://fbx/decoration/nature/hills_A.fbx" id="8_pxmyo"]
+[ext_resource type="PackedScene" uid="uid://cwpyl7xb0wyn" path="res://fbx/decoration/nature/hills_B.fbx" id="10_i3m17"]
+[ext_resource type="PackedScene" uid="uid://gatcoaolk3hh" path="res://fbx/decoration/nature/hills_C.fbx" id="12_cus7t"]
+[ext_resource type="PackedScene" uid="uid://bi6gd5idotygu" path="res://fbx/decoration/nature/mountain_C.fbx" id="14_lugu1"]
+[ext_resource type="PackedScene" uid="uid://b4ldxcjk55vdv" path="res://fbx/decoration/nature/rock_single_B.fbx" id="16_qekny"]
+[ext_resource type="PackedScene" uid="uid://cinsbxix16n58" path="res://fbx/decoration/nature/rock_single_C.fbx" id="17_o6664"]
+[ext_resource type="PackedScene" uid="uid://cfjl24hpdsdhv" path="res://fbx/decoration/nature/rock_single_D.fbx" id="18_wwcrx"]
+[ext_resource type="PackedScene" uid="uid://drdu8ttjahq74" path="res://fbx/decoration/nature/rock_single_E.fbx" id="19_ph8lc"]
+[ext_resource type="PackedScene" uid="uid://doqxsquov2srd" path="res://fbx/decoration/nature/trees_A_cut.fbx" id="20_5nmty"]
+[ext_resource type="PackedScene" uid="uid://ddfyqf64vyfgb" path="res://fbx/decoration/nature/trees_A_large.fbx" id="21_3seta"]
+[ext_resource type="PackedScene" uid="uid://11j3pujr82og" path="res://fbx/decoration/nature/trees_B_large.fbx" id="22_a2gy0"]
+[ext_resource type="PackedScene" uid="uid://cnu7egcewxkpr" path="res://fbx/decoration/nature/trees_B_medium.fbx" id="23_hx1kb"]
+[ext_resource type="PackedScene" uid="uid://c457xt3jv5vqa" path="res://fbx/decoration/nature/trees_B_small.fbx" id="24_deohu"]
+[ext_resource type="PackedScene" uid="uid://dp3m15dmn2cg6" path="res://fbx/decoration/nature/tree_single_A.fbx" id="25_52rui"]
 [ext_resource type="Script" path="res://Level/ui.gd" id="26_6kbgj"]
-[ext_resource type="PackedScene" uid="uid://hk2y3w4ud4t6" path="res://fbx/decoration/nature/mountain_B_grass.fbx" id="26_e7f83"]
+[ext_resource type="PackedScene" uid="uid://ttnlrghcyjg4" path="res://Spawner/fade_effects.tscn" id="26_e6bks"]
+[ext_resource type="PackedScene" uid="uid://cg46jbydovooi" path="res://fbx/decoration/nature/mountain_B_grass.fbx" id="26_e7f83"]
 [ext_resource type="Theme" uid="uid://cvjyqpf37mc22" path="res://Widget/CustomTheme.tres" id="26_js4no"]
-[ext_resource type="PackedScene" uid="uid://dqet36gnxn40e" path="res://fbx/decoration/nature/cloud_big.fbx" id="27_t0bi3"]
-[ext_resource type="FontFile" uid="uid://8s8loo0ty6sj" path="res://Assets/static/FunnelDisplay-Light.ttf" id="27_w11i0"]
-[ext_resource type="FontFile" uid="uid://lnda6gv0yvyd" path="res://Assets/static/FunnelDisplay-Regular.ttf" id="28_h6ojt"]
+[ext_resource type="FontFile" uid="uid://c77yoleiu6x3g" path="res://Assets/static/FunnelDisplay-Light.ttf" id="27_w11i0"]
+[ext_resource type="FontFile" uid="uid://wbhr3644im1h" path="res://Assets/static/FunnelDisplay-Regular.ttf" id="28_h6ojt"]
 [ext_resource type="LightmapGIData" uid="uid://duuwkac5je0bo" path="res://Level/MainMenu.lmbake" id="30_hbg8y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ij33q"]
@@ -38,7 +34,7 @@ panorama = ExtResource("1_072t7")
 sky_material = SubResource("PanoramaSkyMaterial_ij33q")
 
 [sub_resource type="Environment" id="Environment_fmykq"]
-background_mode = 2
+background_mode = 1
 background_color = Color(1, 0.419608, 0.403922, 1)
 sky = SubResource("Sky_h05n3")
 tonemap_mode = 3
@@ -51,8 +47,20 @@ fog_enabled = true
 fog_light_color = Color(0, 0.843137, 0.823529, 1)
 volumetric_fog_sky_affect = 0.545
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oua40"]
-size = Vector3(25, 10, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_vsf1v"]
+size = Vector3(140, 1, 140)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7xth1"]
+lightmap_size_hint = Vector2i(54, 81)
+material = ExtResource("3_u518g")
+add_uv2 = true
+size = Vector3(5, 5, 5)
+
+[sub_resource type="MultiMesh" id="MultiMesh_210tp"]
+transform_format = 1
+instance_count = 128
+mesh = SubResource("BoxMesh_7xth1")
+buffer = PackedFloat32Array(0.19815, -0.236205, 0.952337, -31.6538, -0.19646, -0.961439, -0.197585, -6.555, 0.961323, -0.147796, -0.236677, 32.1019, -0.240108, 0.186369, -0.953738, -5.52531, 0.19195, 0.972159, 0.141645, -5.555, 0.95263, -0.148911, -0.268928, 22.0066, 0.821967, 0.10584, -0.5614, 68.3828, -0.040122, -0.970548, -0.241721, -6.555, -0.569879, 0.22099, -0.792719, 18.3276, -0.16884, -0.180823, -0.969947, 55.2765, 0.00303642, 0.983946, -0.183962, -5.555, 0.986653, -0.0339713, -0.165415, 59.9102, -0.945514, -0.201464, 0.259646, -34.8872, -0.134314, 0.958679, 0.254745, -5.555, -0.299939, 0.205785, -0.932572, -59.1417, 0.235527, 0.199935, -0.952131, 5.71959, -0.0895278, 0.979932, 0.183627, -5.555, 0.968769, 0.0419513, 0.248452, -5.33529, -0.880995, 0.237232, -0.411789, -56.3009, 0.114329, 0.947687, 0.301363, -5.555, 0.461278, 0.218201, -0.861169, 13.6114, 0.29661, 0.224767, 0.929249, -52.1589, -0.0211893, -0.971159, 0.241668, -6.555, 0.955811, -0.09128, -0.28301, 23.1317, -0.241088, 0.238684, 0.941758, -52.0441, -0.103935, -0.971089, 0.219511, -6.555, 0.965958, -0.044915, 0.258666, 39.3704, 0.962052, 0.188202, 0.202578, -45.8662, 0.221278, -0.963776, -0.155476, -6.555, 0.165813, 0.194208, -0.967879, -47.5422, 0.264633, 0.184406, -0.94761, -0.0109749, 0.21592, 0.946371, 0.244463, -5.555, 0.94093, -0.269032, 0.210414, 28.1216, -0.835593, 0.201438, 0.513038, 23.3668, 0.119041, 0.975718, -0.18922, -5.555, -0.538159, -0.0969412, -0.838444, -64.9033, 0.126972, 0.0758177, 0.990016, -4.7734, 0.0555212, -0.997058, 0.0692363, -6.555, 0.991361, 0.0461296, -0.130678, 25.2903, 0.965792, 0.23931, 0.109439, 63.8097, 0.255163, -0.953427, -0.166943, -6.555, 0.064327, 0.188968, -0.980895, -46.9424, -0.274799, 0.261803, 0.926254, -66.7528, -0.332724, -0.929718, 0.16407, -6.555, 0.903206, -0.262838, 0.342252, 27.1243, 0.872351, 0.13873, 0.470913, -18.6288, 0.249379, -0.952313, -0.181416, -6.555, 0.422866, 0.275419, -0.864482, -65.4702, -0.110487, 0.977844, 0.183344, 70, 0.577626, 0.213245, -0.789225, -6.32617, -0.810026, 0.0186863, -0.587801, -4.57857, 0.997206, 0.0839276, -0.0231675, 28.3599, 0.0849601, -0.996234, 0.0479667, -6.555, -0.0190355, -0.0497512, -0.999582, -44.1296, 0.944059, 0.207765, -0.259977, 28.9293, 0.186497, -0.977928, -0.104297, -6.555, -0.275632, 0.0499276, -0.961007, -3.02232, 0.552031, -0.1451, -0.822319, 53.5019, 0.0652469, 0.990253, -0.130932, -5.555, 0.83247, 0.0186059, 0.555562, -47.9569, -0.293147, -0.231468, -0.928703, 1.93782, 0.0708252, 0.963378, -0.262466, -5.555, 0.954489, -0.142574, -0.265752, 59.0771, 0.954768, 0.276494, 0.118195, 56.6848, 0.261964, -0.958002, 0.124936, -6.555, 0.147627, -0.0882339, -0.986115, 2.06295, 0.996792, -0.0916851, 0.000440407, 64.2749, -0.0904178, -0.983789, -0.161201, -6.555, 0.0151978, 0.160484, -0.987935, -31.3554, 0.304656, 0.157062, -0.940488, -1.24158, -0.0601007, 0.988527, 0.145616, -5.555, 0.951616, 0.012149, 0.31029, 15.2601, 0.880437, -0.127279, 0.458947, 26.5137, -0.231702, -0.957217, 0.17903, -6.555, 0.416109, -0.2637, -0.871388, -5.64433, -0.194394, -0.140478, -0.971842, 39.6645, 0.122652, 0.979471, -0.166115, -5.555, 0.974253, -0.151339, -0.173, -38.1444, 0.24568, 0.252774, -0.936882, 36.6263, -0.29376, 0.940468, 0.176708, -5.555, 0.92485, 0.231574, 0.305004, 59.7634, -0.381283, -0.154622, 0.912533, 4.5691, 0.266313, -0.963523, -0.0519887, -6.555, 0.886398, 0.222974, 0.408144, 66.2664, 0.0970622, -0.0775998, 0.993256, -61.774, 0.219107, -0.971863, -0.0973398, -6.555, 0.971891, 0.22685, -0.0772513, -28.1789, -1.00097, -0.00718129, -0.00108347, 34.0871, -0.00666183, 0.967373, -0.257191, -5.555, 0.00289219, -0.257177, -0.967395, -54.9602, 0.450096, 0.0450083, -0.892966, 37.0547, -0.114164, 0.994441, -0.00742092, -5.555, 0.886781, 0.105179, 0.45228, -31.7274, 0.373737, -0.146025, 0.91706, -46.619, 0.0736421, -0.980772, -0.186182, -6.555, 0.925688, 0.13698, -0.355442, 17.6025, -0.3539, 0.096362, 0.931381, 34.0688, 0.048171, -0.992493, 0.120988, -6.555, 0.935113, 0.0875958, 0.346255, 68.2593, -0.905973, -0.0170674, -0.42535, -65.5502, 0.0674698, 0.981796, -0.183102, -5.555, 0.420312, -0.194389, -0.887441, 58.1459, 0.96663, -0.246743, -0.0821319, 35.8392, -0.25527, -0.96064, -0.118362, -6.555, -0.0496445, 0.135243, -0.990578, -47.4227, 0.932534, -0.206516, 0.299556, -52.2586, -0.249657, -0.962699, 0.113506, -6.555, 0.264676, -0.180454, -0.948359, -62.9528, 0.838307, -0.243194, -0.49, -22.0018, -0.273038, -0.962982, 0.0108208, -6.555, -0.474019, 0.124593, -0.872802, -69.3469, 0.555394, -0.0520075, -0.831164, -49.8057, -0.195072, 0.963127, -0.190614, -5.555, 0.80962, 0.267735, 0.524246, 54.1138, -0.890733, 0.182428, 0.418708, -62.4242, 0.193465, 0.981992, -0.0162821, -5.555, -0.413724, 0.0664359, -0.909076, -11.0381, -0.565624, 0.158195, -0.810583, 61.3604, 0.0559395, 0.987547, 0.153697, -5.555, 0.823979, 0.0415496, -0.566863, 66.9863, 0.986376, -0.149216, -0.0824512, -20.7995, -0.130788, -0.972871, 0.196006, -6.555, -0.109352, -0.182369, -0.978154, -54.9172, -0.0952183, 0.199783, 0.976228, -13.3319, -0.160226, -0.970984, 0.183082, -6.555, 0.983495, -0.138845, 0.124341, 27.1006, 0.0674686, -0.0843149, -0.995158, 14.4139, -0.247151, 0.964993, -0.0985152, -5.555, 0.96766, 0.252349, 0.044224, 64.3843, -0.8888, 0.0223602, -0.459929, -29.2722, 0.0314455, 1.00043, -0.01213, -5.555, 0.459398, -0.0252187, -0.888999, -54.8102, 0.427123, -0.268365, -0.864608, -36.9931, 0.324983, 0.937738, -0.13052, -5.555, 0.844958, -0.22501, 0.487256, 60.0798, 0.929726, 0.264147, 0.260455, 48.5934, 0.296125, -0.951781, -0.0917786, -6.555, 0.22343, 0.162294, -0.962154, -20.0334, -0.128509, -0.161604, 0.979475, -7.44352, -0.130235, -0.976367, -0.178178, -6.555, 0.984137, -0.150309, 0.104321, 11.1493, -0.534229, 0.116911, -0.83841, 36.9138, -0.032043, 0.987904, 0.158175, -5.555, 0.845916, 0.111256, -0.523498, -21.8124, 0.834035, -0.0453946, -0.551658, 58.2339, 0.0453145, -0.98868, 0.149866, -6.555, -0.551664, -0.149841, -0.821715, -33.9027, -0.466803, -0.198115, 0.863045, -21.3903, -0.0683152, -0.96466, -0.258391, -6.555, 0.882853, -0.179398, 0.436336, 65.1968, -0.041913, -0.152283, -0.988461, 33.8703, -0.0389723, 0.988825, -0.150687, -5.555, 0.999363, 0.0321746, -0.0473321, 51.8174, 0.993714, 0.118137, 0.0240308, 65.5489, 0.116971, -0.993111, 0.0452584, -6.555, 0.0291828, -0.0421208, -0.999688, 8.06247, 0.902173, 0.0807087, 0.426112, 24.8656, 0.0564047, -0.996996, 0.0694171, -6.555, 0.430005, -0.0385529, -0.903112, -34.2618, -0.138167, 0.139251, -0.981591, 36.1359, 0.00133304, 0.991102, 0.140412, -5.555, 0.991418, 0.0180737, -0.136986, 18.7185, 0.389674, -0.161811, -0.907729, -27.4178, 0.141864, 0.984253, -0.114552, -5.555, 0.91106, -0.0840524, 0.406087, 52.0522, 0.32472, -0.0877792, 0.94279, 34.97, 0.0936302, -0.988828, -0.124314, -6.555, 0.942227, 0.128512, -0.312561, 53.6244, 0.8499, 0.187731, 0.494396, 47.0392, 0.0557161, -0.962384, 0.269655, -6.555, 0.525896, -0.201432, -0.827562, 0.647596, -0.960195, 0.255651, -0.121114, -27.439, 0.21975, 0.943951, 0.250334, -5.555, 0.178146, 0.213541, -0.961595, -14.141, -0.860403, 0.192333, 0.474042, -21.6197, 0.0504859, 0.954957, -0.295821, -5.555, -0.509076, -0.230362, -0.830527, -20.6881, 0.515392, -0.10992, -0.851052, 57.6607, 0.0909854, 0.994158, -0.0733026, -5.555, 0.853284, -0.039614, 0.521861, -41.0996, 0.0267395, -0.224706, 0.975086, -67.9687, 0.0365757, -0.974563, -0.225589, -6.555, 0.999974, 0.041655, -0.0178227, -60.95, 0.163539, -0.256155, -0.953751, -4.1897, 0.235774, 0.948911, -0.214427, -5.555, 0.958993, -0.189613, 0.215363, 50.8997, -0.0413273, 0.0154934, 1.00003, -46.298, 0.0872714, -0.997006, 0.0190532, -6.555, 0.996332, 0.0879731, 0.0398117, -19.5274, -0.203119, 0.0622526, -0.978196, 31.3634, -0.259642, 0.959876, 0.115001, -5.555, 0.945161, 0.277063, -0.178627, 1.03521, -0.933941, 0.0105169, 0.360062, -56.8963, -0.090507, 0.961624, -0.262848, -5.555, -0.34866, -0.277795, -0.896252, -62.9226, -0.131341, 0.27691, 0.952928, 6.45282, 0.0450712, -0.958581, 0.284765, -6.555, 0.991322, 0.0802707, 0.113307, 46.8656, 0.975676, -0.221677, 0.0302817, -0.287842, -0.22365, -0.970082, 0.104509, -6.555, 0.00620231, -0.10863, -0.995069, -3.30665, 0.817879, 0.24682, -0.521684, -37.2899, 0.296537, -0.955985, 0.0126026, -6.555, -0.495116, -0.164841, -0.854218, -51.7757, 0.927605, -0.150951, 0.344621, -22.1341, -0.0789089, -0.974563, -0.214481, -6.555, 0.367863, 0.171589, -0.915006, -65.5779, 0.980528, 0.121683, -0.160496, 54.9765, 0.135406, -0.988759, 0.0775968, -6.555, -0.1491, -0.0977202, -0.984998, -22.7999, 0.923715, 0.263059, 0.282049, 56.2105, 0.18725, -0.945845, 0.268916, -6.555, 0.337178, -0.195393, -0.922027, -3.4547, -0.967569, -0.0616404, -0.249021, 3.40395, -0.075627, 0.997029, 0.0470526, -5.555, 0.245136, 0.0642951, -0.968388, -20.0699, -0.893649, 0.210147, -0.399036, 28.6598, 0.245072, 0.969788, -0.0381177, -5.555, 0.378592, -0.131725, -0.917234, -32.6529, 0.914212, 0.227328, 0.338438, 67.4106, 0.254249, -0.967468, -0.0369493, -6.555, 0.31871, 0.119707, -0.941326, -4.23847, 0.939295, 0.0427291, -0.343366, 64.7709, -0.0436776, -0.970751, -0.240285, -6.555, -0.343246, 0.240455, -0.909046, 3.90324, 0.963764, 0.0273595, 0.269093, 31.5874, 0.0617933, -0.991801, -0.120475, -6.555, 0.263327, 0.132605, -0.956596, -56.3336, -0.324777, 0.0678916, -0.944411, -48.0799, -0.0615214, 0.994801, 0.0926708, -5.555, 0.944847, 0.0881107, -0.318593, 49.0686, -0.820409, 0.00996857, 0.573437, -6.95234, 0.0538772, 0.997763, 0.0597364, -5.555, -0.570987, 0.0798236, -0.818293, 2.06178, 0.999682, -0.0501371, 0.0110858, 52.9736, -0.0496705, -0.999006, -0.0390118, -6.555, 0.0130177, 0.0384104, -1.00018, -26.0627, 0.122628, 0.239197, -0.964235, 53.1903, -0.125035, 0.967543, 0.224116, -5.555, 0.985561, 0.0929869, 0.148407, -23.4286, 0.0892175, -0.0207101, 0.996801, -29.9293, -0.188933, -0.983002, -0.00351323, -6.555, 0.978951, -0.187827, -0.0915223, 23.4207, -0.492089, -0.0684791, -0.868999, 50.0915, 0.152474, 0.97576, -0.163233, -5.555, 0.858255, -0.212612, -0.46925, 65.7423, 0.977218, 0.0592351, 0.208656, 8.00894, 0.0720135, -0.996931, -0.05425, -6.555, 0.204597, 0.0679722, -0.977507, -62.0655, 0.285315, -0.2782, 0.91826, -12.4543, -0.130449, -0.960351, -0.25042, -6.555, 0.950568, -0.0482894, -0.309984, 1.99748, -0.432653, -0.0487244, 0.901354, 17.3416, -0.112606, -0.988819, -0.107504, -6.555, 0.895619, -0.147862, 0.421907, 47.7546, -0.938085, -0.162808, -0.309016, -44.9873, -0.222806, 0.960952, 0.170089, -5.555, 0.268988, 0.22818, -0.936793, -35.5641, 0.00673492, -0.173253, 0.98587, -65.1205, 0.00374224, -0.985881, -0.17328, -6.555, 1.00097, 0.00485153, -0.00598549, 41.4563, 0.924093, -0.237441, 0.302778, 44.6839, -0.245635, -0.970329, -0.0112506, -6.555, 0.29617, -0.0639125, -0.954044, 19.9777, 0.96494, -0.209186, 0.164722, 52.2094, -0.192213, -0.975822, -0.113251, -6.555, 0.184245, 0.0775417, -0.980837, -37.233, 0.866485, -0.0386888, 0.499707, 50.992, -0.00407497, -0.998524, -0.0702427, -6.555, 0.501186, 0.0587692, -0.8645, 5.19307, 0.407249, -0.150158, 0.901999, 4.3083, -0.169873, -0.982647, -0.0868864, -6.555, 0.898495, -0.117723, -0.425265, 35.8629, -0.0304995, 0.181641, -0.983909, 49.0846, -0.181909, 0.966954, 0.184149, -5.555, 0.98386, 0.184414, 0.00354697, 10.5013, 0.985379, -0.171745, 0.0391527, 69.6961, -0.176151, -0.961064, 0.217551, -6.555, 0.000264585, -0.221046, -0.976289, -6.80976, -0.949839, 0.262198, -0.176239, -19.1098, 0.292546, 0.940786, -0.177029, -5.555, 0.119267, -0.219487, -0.969331, -32.7877, 0.964412, 0.125333, -0.237072, 43.8664, 0.180636, -0.957675, 0.228537, -6.555, -0.198197, -0.262965, -0.945288, -39.7743, 0.994835, -0.0429802, -0.102256, 26.5219, -0.0271422, -0.989072, 0.151663, -6.555, -0.107549, -0.147956, -0.984146, 20.1214, 0.549697, 0.0283878, 0.836079, -60.6253, 0.207267, -0.973853, -0.103206, -6.555, 0.810478, 0.229794, -0.540667, -2.59472, -0.878803, 0.277288, 0.39092, -35.7413, 0.219583, 0.95867, -0.186377, -5.555, -0.426017, -0.0778713, -0.902467, -57.7149, -0.166199, 0.130579, -0.978432, -60.2044, -0.212181, 0.964284, 0.164733, -5.555, 0.964032, 0.234748, -0.132424, 63.2862, -0.984859, 0.164485, 0.0707024, -14.8426, 0.148428, 0.971172, -0.191822, -5.555, -0.100116, -0.178245, -0.979901, -27.0526, 0.448366, 0.262889, 0.855487, -47.206, 0.0124693, -0.958583, 0.288035, -6.555, 0.894882, -0.118359, -0.432642, 51.859, -0.209955, 0.172423, -0.963426, -17.3621, 0.027553, 0.985995, 0.170458, -5.555, 0.978346, 0.00923402, -0.211554, 66.0117, 0.36326, 0.187933, 0.913633, 6.19922, 0.00415173, -0.980788, 0.200096, -6.555, 0.932752, -0.0688249, -0.356705, 47.6108, 0.449767, 0.0352563, -0.89357, 14.562, 0.23325, 0.960974, 0.155319, -5.555, 0.863311, -0.278005, 0.423567, -8.71338, 0.500454, -0.127458, 0.857497, 47.7419, 0.105166, -0.973884, -0.206135, -6.555, 0.860516, 0.193148, -0.473506, 53.5959, 0.0738739, 0.160486, -0.985286, -21.0696, 0.142211, 0.976212, 0.169671, -5.555, 0.988089, -0.152501, 0.0492443, 52.3168, -0.00455169, -0.0212692, -1.00076, -1.02492, 0.185034, 0.983509, -0.0217441, -5.555, 0.983739, -0.185089, -0.00054056, 19.2756, 0.48868, -0.1017, -0.867669, 11.3789, -0.119049, 0.977167, -0.181584, -5.555, 0.865459, 0.19184, 0.46495, -11.1884, 0.475269, 0.216814, 0.853881, -66.0152, 0.0337378, -0.97398, 0.22853, -6.555, 0.880331, -0.0797257, -0.469748, 42.3839, -0.880201, -0.103396, 0.465356, 11.0842, -0.0348308, 0.988508, 0.153752, -5.555, -0.47543, 0.119005, -0.872815, -32.2746, 0.97595, -0.181814, -0.128318, -57.3705, -0.20288, -0.964114, -0.17699, -6.555, -0.0914419, 0.198568, -0.976837, -60.8137, -0.292685, 0.0274068, -0.956862, -52.7415, 0.0160636, 1.00059, 0.0237457, -5.555, 0.95712, -0.00841224, -0.293004, 59.7126, 0.0735479, 0.0887203, 0.994344, -60.5383, -0.0337556, -0.996248, 0.091387, -6.555, 0.997724, -0.0402457, -0.0702069, 7.72251, 0.993226, -0.115645, 0.0461398, 62.1321, -0.102847, -0.971091, -0.220013, -6.555, 0.0701791, 0.213564, -0.975431, 33.6093, 0.992752, -0.039628, 0.121962, 58.1812, -0.0359958, -0.999845, -0.0318701, -6.555, 0.123083, 0.0272217, -0.993031, -12.9505, 0.109268, -0.191807, 0.976356, 7.86841, -0.171862, -0.971102, -0.171541, -6.555, 0.980064, -0.148905, -0.138936, 12.8262, 0.953257, 0.148547, 0.266902, 27.0069, 0.17644, -0.981761, -0.08376, -6.555, 0.249343, 0.12681, -0.961118, -68.0963, 0.843739, -0.22621, 0.488809, -13.036, -0.222608, -0.973676, -0.0663482, -6.555, 0.49046, -0.0527796, -0.871013, -42.1295, -0.97032, -0.215047, -0.119309, 48.1334, -0.172991, 0.942012, -0.291014, -5.555, 0.174797, -0.261476, -0.950304, -55.9164, 0.886728, -0.199265, -0.419534, 0.774918, -0.0789629, -0.955708, 0.287034, -6.555, -0.45769, -0.221172, -0.862325, -55.1405, 0.514453, 0.213993, -0.831592, 53.0165, 0.0937511, 0.949625, 0.302365, -5.555, 0.853551, -0.233282, 0.468008, 25.9738, 0.0128337, 0.0423583, -1.00002, 52.3856, 0.188858, 0.982037, 0.0440202, -5.555, 0.982939, -0.189238, 0.00459888, 28.6825, 0.956717, -0.272485, 0.111562, 57.6602, -0.282723, -0.956077, 0.0893608, -6.555, 0.0822307, -0.116917, -0.990742, 13.8737, 0.372391, 0.0475705, 0.927935, 7.50389, -0.000937915, -0.999668, 0.0516242, -6.555, 0.929153, -0.0200747, -0.371851, 65.2988, -0.889257, -0.0120776, -0.459431, -31.1753, 0.0774787, 0.982393, -0.17579, -5.555, 0.453012, -0.191727, -0.871792, -14.2337, -0.262155, -0.0458122, -0.964975, 7.34776, -0.0518906, 0.999098, -0.0333351, -5.555, 0.964668, 0.0412929, -0.264031, 31.5339, 0.931401, 0.232579, 0.283551, -58.2509, 0.291242, -0.939438, -0.186104, -6.555, 0.222872, 0.255663, -0.941789, -59.4632, 0.136727, -0.125172, -0.983686, -17.1017, -0.0463634, 0.9911, -0.13256, -5.555, 0.990534, 0.0636679, 0.129577, 45.5822)
 
 [sub_resource type="LabelSettings" id="LabelSettings_up55n"]
 font_size = 42
@@ -77,14 +85,13 @@ environment = SubResource("Environment_fmykq")
 
 [node name="World" type="Node3D" parent="."]
 
-[node name="Floor" type="CSGBox3D" parent="World"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+[node name="Floor" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.055, 0)
 material_override = ExtResource("3_u518g")
-use_collision = true
-size = Vector3(140, 10, 140)
+mesh = SubResource("BoxMesh_vsf1v")
 
 [node name="Camera3D" type="Camera3D" parent="World"]
-transform = Transform3D(0.875465, 0, -0.483282, 0, 1, 0, 0.483282, 0, 0.875465, -42.115, -4.565, -0.105)
+transform = Transform3D(0.875465, 0, -0.483282, 0, 1, 0, 0.483282, 0, 0.875465, -42.115, -3.60454, -0.105)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="World/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.695)
@@ -92,254 +99,24 @@ light_energy = 2.343
 light_bake_mode = 1
 omni_range = 48.324
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
+mesh = SubResource("BoxMesh_7xth1")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.695, 0)
+multimesh = SubResource("MultiMesh_210tp")
+
 [node name="hills_A" parent="." instance=ExtResource("8_pxmyo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, -5, -16)
-
-[node name="hills_A_trees" parent="." instance=ExtResource("9_w13g2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -5, -16)
 
 [node name="hills_B" parent="." instance=ExtResource("10_i3m17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -5, -9)
 
-[node name="hills_B_trees" parent="." instance=ExtResource("11_t8p77")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, -5, -28)
-
 [node name="hills_C" parent="." instance=ExtResource("12_cus7t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, -5, -19)
 
-[node name="mountain_B_grass_trees" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -3)
-
-[node name="mountain_B_grass_trees10" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 5)
-
-[node name="mountain_B_grass_trees11" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 14)
-
-[node name="mountain_B_grass_trees12" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 23)
-
-[node name="mountain_B_grass_trees13" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 32)
-
-[node name="mountain_B_grass_trees14" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 41)
-
-[node name="mountain_B_grass_trees15" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 50)
-
-[node name="mountain_B_grass_trees16" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 58)
-
-[node name="mountain_B_grass_trees17" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, 66)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="mountain_B_grass_trees17"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain_B_grass_trees17/StaticBody3D"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.0741, 1, -3.23524)
-shape = SubResource("BoxShape3D_oua40")
-
-[node name="mountain_B_grass_trees2" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -12)
-
-[node name="mountain_B_grass_trees3" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -21)
-
-[node name="mountain_B_grass_trees4" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -28)
-
-[node name="mountain_B_grass_trees5" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -35)
-
-[node name="mountain_B_grass_trees6" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -43)
-
-[node name="mountain_B_grass_trees7" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -50)
-
-[node name="mountain_B_grass_trees8" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -58)
-
-[node name="mountain_B_grass_trees9" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(1.29409, 0, -4.82963, 0, 5, 0, 4.82963, 0, 1.29409, 72, -8, -65)
-
-[node name="mountain_B_grass_trees18" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -3.47059, -8, -69.5294)
-
-[node name="mountain_B_grass_trees19" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 4.52941, -8, -69.5294)
-
-[node name="mountain_B_grass_trees20" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 13.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees21" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 22.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees22" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 31.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees23" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 40.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees24" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 49.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees25" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 57.5294, -8, -69.5294)
-
-[node name="mountain_B_grass_trees26" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 65.5294, -8, -69.5294)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="mountain_B_grass_trees26"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain_B_grass_trees26/StaticBody3D"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.0741, 1, -3.23524)
-shape = SubResource("BoxShape3D_oua40")
-
-[node name="mountain_B_grass_trees27" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -12.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees28" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -21.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees29" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -28.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees30" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -35.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees31" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -43.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees32" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -50.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees33" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -58.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees34" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, -65.4706, -8, -69.5294)
-
-[node name="mountain_B_grass_trees35" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 2.94118)
-
-[node name="mountain_B_grass_trees36" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -5.05882)
-
-[node name="mountain_B_grass_trees37" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -14.0588)
-
-[node name="mountain_B_grass_trees38" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -23.0588)
-
-[node name="mountain_B_grass_trees39" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -32.0588)
-
-[node name="mountain_B_grass_trees40" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -41.0588)
-
-[node name="mountain_B_grass_trees41" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -50.0588)
-
-[node name="mountain_B_grass_trees42" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -58.0588)
-
-[node name="mountain_B_grass_trees43" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, -66.0588)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="mountain_B_grass_trees43"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain_B_grass_trees43/StaticBody3D"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.0741, 1, -3.23524)
-shape = SubResource("BoxShape3D_oua40")
-
-[node name="mountain_B_grass_trees44" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 11.9412)
-
-[node name="mountain_B_grass_trees45" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 20.9412)
-
-[node name="mountain_B_grass_trees46" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 27.9412)
-
-[node name="mountain_B_grass_trees47" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 34.9412)
-
-[node name="mountain_B_grass_trees48" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 42.9412)
-
-[node name="mountain_B_grass_trees49" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 49.9412)
-
-[node name="mountain_B_grass_trees50" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 57.9412)
-
-[node name="mountain_B_grass_trees51" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-1.2941, 0, 4.82963, 0, 5, 0, -4.82963, 0, -1.2941, -71, -8, 64.9412)
-
-[node name="mountain_B_grass_trees52" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 4.47059, -8, 65.4706)
-
-[node name="mountain_B_grass_trees53" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -3.52941, -8, 65.4706)
-
-[node name="mountain_B_grass_trees54" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -12.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees55" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -21.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees56" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -30.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees57" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -39.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees58" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -48.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees59" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -56.5294, -8, 65.4706)
-
-[node name="mountain_B_grass_trees60" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, -64.5294, -8, 65.4706)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="mountain_B_grass_trees60"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mountain_B_grass_trees60/StaticBody3D"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.0741, 1, -3.23524)
-shape = SubResource("BoxShape3D_oua40")
-
-[node name="mountain_B_grass_trees61" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 13.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees62" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 22.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees63" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 29.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees64" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 36.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees65" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 44.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees66" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 51.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees67" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 59.4706, -8, 65.4706)
-
-[node name="mountain_B_grass_trees68" parent="." instance=ExtResource("13_f30bm")]
-transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 66.4706, -8, 65.4706)
-
 [node name="mountain_C" parent="." instance=ExtResource("14_lugu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -5, 15)
-
-[node name="mountain_C_grass_trees" parent="." instance=ExtResource("15_f8kai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, -5, 5)
 
 [node name="rock_single_B" parent="." instance=ExtResource("16_qekny")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, -5, 1)
@@ -391,360 +168,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22, -5, 36)
 
 [node name="mountain_B_grass" parent="." instance=ExtResource("26_e7f83")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, -5, 44)
-
-[node name="cloud_big" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 8, -31)
-
-[node name="cloud_big2" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1, 8, -31)
-
-[node name="cloud_big3" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -24)
-
-[node name="cloud_big4" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -39)
-
-[node name="cloud_big5" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11, 8, -39)
-
-[node name="cloud_big6" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 8, -5)
-
-[node name="cloud_big7" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1, 8, -5)
-
-[node name="cloud_big8" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, 2)
-
-[node name="cloud_big9" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9, 8, -13)
-
-[node name="cloud_big10" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11, 8, -13)
-
-[node name="cloud_big11" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 8, -17)
-
-[node name="cloud_big12" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -17)
-
-[node name="cloud_big13" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, -10)
-
-[node name="cloud_big14" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, -25)
-
-[node name="cloud_big15" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -25)
-
-[node name="cloud_big16" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 30)
-
-[node name="cloud_big17" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, 30)
-
-[node name="cloud_big18" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 37)
-
-[node name="cloud_big19" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 22)
-
-[node name="cloud_big20" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 22)
-
-[node name="cloud_big21" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 56)
-
-[node name="cloud_big22" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 8, 56)
-
-[node name="cloud_big23" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 63)
-
-[node name="cloud_big24" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 8, 48)
-
-[node name="cloud_big25" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 48)
-
-[node name="cloud_big26" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8, 44)
-
-[node name="cloud_big27" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -45, 8, 44)
-
-[node name="cloud_big28" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35, 8, 51)
-
-[node name="cloud_big29" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35, 8, 36)
-
-[node name="cloud_big30" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 36)
-
-[node name="cloud_big31" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, 7)
-
-[node name="cloud_big32" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, 7)
-
-[node name="cloud_big33" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 14)
-
-[node name="cloud_big34" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -1)
-
-[node name="cloud_big35" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -1)
-
-[node name="cloud_big36" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, 33)
-
-[node name="cloud_big37" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, 33)
-
-[node name="cloud_big38" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 40)
-
-[node name="cloud_big39" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, 25)
-
-[node name="cloud_big40" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, 25)
-
-[node name="cloud_big41" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, 21)
-
-[node name="cloud_big42" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11, 8, 21)
-
-[node name="cloud_big43" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, 28)
-
-[node name="cloud_big44" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, 13)
-
-[node name="cloud_big45" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 1, 8, 13)
-
-[node name="cloud_big46" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, -41)
-
-[node name="cloud_big47" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, -41)
-
-[node name="cloud_big48" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -34)
-
-[node name="cloud_big49" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -49)
-
-[node name="cloud_big50" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -49)
-
-[node name="cloud_big51" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 8, -15)
-
-[node name="cloud_big52" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38, 8, -15)
-
-[node name="cloud_big53" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -8)
-
-[node name="cloud_big54" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48, 8, -23)
-
-[node name="cloud_big55" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28, 8, -23)
-
-[node name="cloud_big56" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 8, -27)
-
-[node name="cloud_big57" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11, 8, -27)
-
-[node name="cloud_big58" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, -20)
-
-[node name="cloud_big59" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21, 8, -35)
-
-[node name="cloud_big60" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 1, 8, -35)
-
-[node name="cloud_big61" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -41)
-
-[node name="cloud_big62" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -41)
-
-[node name="cloud_big63" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -34)
-
-[node name="cloud_big64" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -49)
-
-[node name="cloud_big65" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -49)
-
-[node name="cloud_big66" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -15)
-
-[node name="cloud_big67" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -15)
-
-[node name="cloud_big68" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -8)
-
-[node name="cloud_big69" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -23)
-
-[node name="cloud_big70" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -23)
-
-[node name="cloud_big71" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 8, -27)
-
-[node name="cloud_big72" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65, 8, -27)
-
-[node name="cloud_big73" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, -20)
-
-[node name="cloud_big74" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, -35)
-
-[node name="cloud_big75" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -75, 8, -35)
-
-[node name="cloud_big76" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, -4)
-
-[node name="cloud_big77" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, -4)
-
-[node name="cloud_big78" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 3)
-
-[node name="cloud_big79" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, -12)
-
-[node name="cloud_big80" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, -12)
-
-[node name="cloud_big81" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 8, 22)
-
-[node name="cloud_big82" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38, 8, 22)
-
-[node name="cloud_big83" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 29)
-
-[node name="cloud_big84" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 8, 14)
-
-[node name="cloud_big85" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48, 8, 14)
-
-[node name="cloud_big86" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 8, 10)
-
-[node name="cloud_big87" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65, 8, 10)
-
-[node name="cloud_big88" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 17)
-
-[node name="cloud_big89" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -55, 8, 2)
-
-[node name="cloud_big90" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -75, 8, 2)
-
-[node name="cloud_big91" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -89, 2, -64)
-
-[node name="cloud_big92" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 2, -39)
-
-[node name="cloud_big93" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -95, 2, -12)
-
-[node name="cloud_big94" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 2, 10)
-
-[node name="cloud_big95" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 11, 16)
-
-[node name="cloud_big96" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 4, 48)
-
-[node name="cloud_big97" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, -84, 4, 74)
-
-[node name="cloud_big98" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -72, 2, 82.4286)
-
-[node name="cloud_big99" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -47, 2, 77.4286)
-
-[node name="cloud_big100" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -20, 2, 88.4286)
-
-[node name="cloud_big101" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 2, 2, 77.4286)
-
-[node name="cloud_big102" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 8, 11, 77.4286)
-
-[node name="cloud_big103" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 40, 4, 77.4286)
-
-[node name="cloud_big104" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 66, 4, 77.4286)
-
-[node name="cloud_big105" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -72, 2, -74.5714)
-
-[node name="cloud_big106" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -47, 2, -79.5714)
-
-[node name="cloud_big107" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, -20, 2, -68.5714)
-
-[node name="cloud_big108" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 2, 2, -79.5714)
-
-[node name="cloud_big109" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 8, 11, -79.5714)
-
-[node name="cloud_big110" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 40, 4, -79.5714)
-
-[node name="cloud_big111" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(-9.65926, 0, 2.58819, 0, 10, 0, -2.58819, 0, -9.65926, 66, 4, -79.5714)
-
-[node name="cloud_big112" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 80, 2, -75)
-
-[node name="cloud_big113" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 2, -50)
-
-[node name="cloud_big114" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 74, 2, -23)
-
-[node name="cloud_big115" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 2, -0.999992)
-
-[node name="cloud_big116" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 11, 5.00001)
-
-[node name="cloud_big117" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 4, 37)
-
-[node name="cloud_big118" parent="." instance=ExtResource("27_t0bi3")]
-transform = Transform3D(2.58819, 0, 9.65926, 0, 10, 0, -9.65926, 0, 2.58819, 85, 4, 63)
 
 [node name="PistolBullet" parent="." instance=ExtResource("7_t4ltj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -4, -6)
@@ -877,7 +300,12 @@ theme = ExtResource("26_js4no")
 text = "Back to Menu"
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+directional = true
 light_data = ExtResource("30_hbg8y")
+
+[node name="FadeEffects" parent="." instance=ExtResource("26_e6bks")]
+layer = 2
 
 [connection signal="pressed" from="UI/Main/VBoxContainer/btnStart" to="UI" method="_on_btn_start_pressed"]
 [connection signal="pressed" from="UI/Main/VBoxContainer/btnSetting" to="UI" method="_on_btn_setting_pressed"]

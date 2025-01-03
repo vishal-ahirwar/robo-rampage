@@ -79,3 +79,10 @@ libraries = {
 "": SubResource("AnimationLibrary_p4q7j")
 }
 autoplay = "idle"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0564458, 1.05743, 0)
+light_energy = 5.364
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 3.301
